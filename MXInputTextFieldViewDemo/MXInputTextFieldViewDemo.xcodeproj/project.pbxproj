@@ -1,0 +1,402 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		178C23875206F0602B0A9D7F /* libPods-MXInputTextFieldViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 010F17FB9EE0F58E3FAEA0DB /* libPods-MXInputTextFieldViewDemo.a */; };
+		90D5BA9E1EE7B02C000E3830 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D5BA9D1EE7B02C000E3830 /* main.m */; };
+		90D5BAA11EE7B02C000E3830 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D5BAA01EE7B02C000E3830 /* AppDelegate.m */; };
+		90D5BAA41EE7B02C000E3830 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D5BAA31EE7B02C000E3830 /* ViewController.m */; };
+		90D5BAA71EE7B02C000E3830 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D5BAA51EE7B02C000E3830 /* Main.storyboard */; };
+		90D5BAA91EE7B02C000E3830 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90D5BAA81EE7B02C000E3830 /* Assets.xcassets */; };
+		90D5BAAC1EE7B02C000E3830 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D5BAAA1EE7B02C000E3830 /* LaunchScreen.storyboard */; };
+		90D5BAB51EE7B0D2000E3830 /* MXInputTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D5BAB41EE7B0D2000E3830 /* MXInputTextFieldView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		010F17FB9EE0F58E3FAEA0DB /* libPods-MXInputTextFieldViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MXInputTextFieldViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29DFA0FA783B5FF15FD53244 /* Pods-MXInputTextFieldViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MXInputTextFieldViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MXInputTextFieldViewDemo/Pods-MXInputTextFieldViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		90D5BA991EE7B02C000E3830 /* MXInputTextFieldViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MXInputTextFieldViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90D5BA9D1EE7B02C000E3830 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		90D5BA9F1EE7B02C000E3830 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		90D5BAA01EE7B02C000E3830 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		90D5BAA21EE7B02C000E3830 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		90D5BAA31EE7B02C000E3830 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		90D5BAA61EE7B02C000E3830 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		90D5BAA81EE7B02C000E3830 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		90D5BAAB1EE7B02C000E3830 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		90D5BAAD1EE7B02C000E3830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90D5BAB31EE7B0D2000E3830 /* MXInputTextFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXInputTextFieldView.h; sourceTree = "<group>"; };
+		90D5BAB41EE7B0D2000E3830 /* MXInputTextFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXInputTextFieldView.m; sourceTree = "<group>"; };
+		CE55005FB5D9457D39811C57 /* Pods-MXInputTextFieldViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MXInputTextFieldViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MXInputTextFieldViewDemo/Pods-MXInputTextFieldViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90D5BA961EE7B02C000E3830 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				178C23875206F0602B0A9D7F /* libPods-MXInputTextFieldViewDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3EE88E7B32B9FECCC8E51437 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE55005FB5D9457D39811C57 /* Pods-MXInputTextFieldViewDemo.debug.xcconfig */,
+				29DFA0FA783B5FF15FD53244 /* Pods-MXInputTextFieldViewDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		90D5BA901EE7B02C000E3830 = {
+			isa = PBXGroup;
+			children = (
+				90D5BA9B1EE7B02C000E3830 /* MXInputTextFieldViewDemo */,
+				90D5BA9A1EE7B02C000E3830 /* Products */,
+				3EE88E7B32B9FECCC8E51437 /* Pods */,
+				BD3F9D9301442327E2C5A339 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		90D5BA9A1EE7B02C000E3830 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90D5BA991EE7B02C000E3830 /* MXInputTextFieldViewDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90D5BA9B1EE7B02C000E3830 /* MXInputTextFieldViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				90D5BAB31EE7B0D2000E3830 /* MXInputTextFieldView.h */,
+				90D5BAB41EE7B0D2000E3830 /* MXInputTextFieldView.m */,
+				90D5BA9F1EE7B02C000E3830 /* AppDelegate.h */,
+				90D5BAA01EE7B02C000E3830 /* AppDelegate.m */,
+				90D5BAA21EE7B02C000E3830 /* ViewController.h */,
+				90D5BAA31EE7B02C000E3830 /* ViewController.m */,
+				90D5BAA51EE7B02C000E3830 /* Main.storyboard */,
+				90D5BAA81EE7B02C000E3830 /* Assets.xcassets */,
+				90D5BAAA1EE7B02C000E3830 /* LaunchScreen.storyboard */,
+				90D5BAAD1EE7B02C000E3830 /* Info.plist */,
+				90D5BA9C1EE7B02C000E3830 /* Supporting Files */,
+			);
+			path = MXInputTextFieldViewDemo;
+			sourceTree = "<group>";
+		};
+		90D5BA9C1EE7B02C000E3830 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				90D5BA9D1EE7B02C000E3830 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD3F9D9301442327E2C5A339 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				010F17FB9EE0F58E3FAEA0DB /* libPods-MXInputTextFieldViewDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		90D5BA981EE7B02C000E3830 /* MXInputTextFieldViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90D5BAB01EE7B02C000E3830 /* Build configuration list for PBXNativeTarget "MXInputTextFieldViewDemo" */;
+			buildPhases = (
+				B190F59547D4082749B46074 /* [CP] Check Pods Manifest.lock */,
+				90D5BA951EE7B02C000E3830 /* Sources */,
+				90D5BA961EE7B02C000E3830 /* Frameworks */,
+				90D5BA971EE7B02C000E3830 /* Resources */,
+				C4125E6EF194F4670C42B1AA /* [CP] Embed Pods Frameworks */,
+				1AAC65B3549ACDAB8CF0F7BA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MXInputTextFieldViewDemo;
+			productName = MXInputTextFieldViewDemo;
+			productReference = 90D5BA991EE7B02C000E3830 /* MXInputTextFieldViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90D5BA911EE7B02C000E3830 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = yellow;
+				TargetAttributes = {
+					90D5BA981EE7B02C000E3830 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 3GZ2MLR74W;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 90D5BA941EE7B02C000E3830 /* Build configuration list for PBXProject "MXInputTextFieldViewDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 90D5BA901EE7B02C000E3830;
+			productRefGroup = 90D5BA9A1EE7B02C000E3830 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90D5BA981EE7B02C000E3830 /* MXInputTextFieldViewDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		90D5BA971EE7B02C000E3830 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90D5BAAC1EE7B02C000E3830 /* LaunchScreen.storyboard in Resources */,
+				90D5BAA91EE7B02C000E3830 /* Assets.xcassets in Resources */,
+				90D5BAA71EE7B02C000E3830 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AAC65B3549ACDAB8CF0F7BA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MXInputTextFieldViewDemo/Pods-MXInputTextFieldViewDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B190F59547D4082749B46074 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C4125E6EF194F4670C42B1AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MXInputTextFieldViewDemo/Pods-MXInputTextFieldViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90D5BA951EE7B02C000E3830 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90D5BAA41EE7B02C000E3830 /* ViewController.m in Sources */,
+				90D5BAA11EE7B02C000E3830 /* AppDelegate.m in Sources */,
+				90D5BAB51EE7B0D2000E3830 /* MXInputTextFieldView.m in Sources */,
+				90D5BA9E1EE7B02C000E3830 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		90D5BAA51EE7B02C000E3830 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90D5BAA61EE7B02C000E3830 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		90D5BAAA1EE7B02C000E3830 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90D5BAAB1EE7B02C000E3830 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		90D5BAAE1EE7B02C000E3830 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		90D5BAAF1EE7B02C000E3830 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90D5BAB11EE7B02C000E3830 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE55005FB5D9457D39811C57 /* Pods-MXInputTextFieldViewDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3GZ2MLR74W;
+				INFOPLIST_FILE = MXInputTextFieldViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.msxf.MXInputTextFieldViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		90D5BAB21EE7B02C000E3830 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29DFA0FA783B5FF15FD53244 /* Pods-MXInputTextFieldViewDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3GZ2MLR74W;
+				INFOPLIST_FILE = MXInputTextFieldViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.msxf.MXInputTextFieldViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90D5BA941EE7B02C000E3830 /* Build configuration list for PBXProject "MXInputTextFieldViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D5BAAE1EE7B02C000E3830 /* Debug */,
+				90D5BAAF1EE7B02C000E3830 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90D5BAB01EE7B02C000E3830 /* Build configuration list for PBXNativeTarget "MXInputTextFieldViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D5BAB11EE7B02C000E3830 /* Debug */,
+				90D5BAB21EE7B02C000E3830 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 90D5BA911EE7B02C000E3830 /* Project object */;
+}
