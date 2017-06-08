@@ -10,12 +10,16 @@
 
 @interface MXInputTextFieldView : UIView
 
+/*********leftImage*********/
 @property (copy, nonatomic) NSString *leftImageName;
-/*placeholder*/
+
+/*********placeholder*********/
 @property (copy, nonatomic) NSString *placeholder;
+//默认fontsize为15
 @property (strong, nonatomic) UIFont *placeholderFont;
 @property (strong, nonatomic) UIColor *placeholderColor;
-/*textField*/
+
+/*********textField*********/
 @property (copy, nonatomic) NSString *text;
 @property (strong, nonatomic) UIFont *font;
 @property (strong, nonatomic) UIColor *textColor;
@@ -23,11 +27,15 @@
 @property (assign, nonatomic) NSUInteger maxLimit;
 //激活键盘
 @property (assign, nonatomic) BOOL activity;
-/*title*/
+
+/*********title*********/
 @property (copy, nonatomic) NSString *titleText;
+//默认白色
 @property (strong, nonatomic) UIColor *titleTextColor;
+//默认fontsize为15
 @property (strong, nonatomic) UIFont *titleFont;
-/*下划线*/
+
+/*********下划线*********/
 @property (assign, nonatomic) BOOL showSubline;
 @property (strong, nonatomic) UIColor *sublineColor;
 @end
