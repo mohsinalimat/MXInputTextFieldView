@@ -75,12 +75,13 @@
         
         [self addObserver:self forKeyPath:@"refreshPlaceholder" options:NSKeyValueObservingOptionNew context:nil];
         
-        self.titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, MXTitleLabelHeight, frame.size.width, MXTitleLabelHeight)];
+        self.titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(2, MXTitleLabelHeight, frame.size.width, MXTitleLabelHeight)];
         self.titleLabel.alpha = 0;
         self.titleLabel.font = [UIFont systemFontOfSize:15];
         [self addSubview:_titleLabel];
         
         self.iconImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, (frame.size.height-MXIconWidthAndHeight)/2.0, MXIconWidthAndHeight, MXIconWidthAndHeight)];
+        self.iconImageView.contentMode = UIViewContentModeScaleAspectFit;
         [self addSubview:_iconImageView];
         
         self.textField = [[MXTextField alloc]initWithFrame:CGRectMake(self.textFieldX, (frame.size.height-self.textFieldHeight)/2.0, self.textFieldWidth, self.textFieldHeight)];
@@ -136,6 +137,10 @@
 
 - (void)setClearButtonMode:(UITextFieldViewMode)clearButtonMode {
     self.textField.clearButtonMode = clearButtonMode;
+}
+
+- (void)setPassword:(BOOL)password {
+    self.textField.secureTextEntry = password;
 }
 
 - (void)setMaxLimit:(NSUInteger)maxLimit {

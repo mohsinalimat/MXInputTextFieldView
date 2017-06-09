@@ -32,11 +32,12 @@
 /*********title*********/
 //如果为空，没有动画
 @property (copy, nonatomic) NSString *titleText;
-//默认白色
+//默认黑色
 @property (strong, nonatomic) UIColor *titleTextColor;
 //默认fontsize为15
 @property (strong, nonatomic) UIFont *titleFont;
-
+//密码
+@property (assign, nonatomic) BOOL password;
 /*********下划线*********/
 //默认为YES
 @property (assign, nonatomic) BOOL showSubline;
