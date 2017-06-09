@@ -134,6 +134,10 @@
     self.textField.tintColor = tintColor;
 }
 
+- (void)setClearButtonMode:(UITextFieldViewMode)clearButtonMode {
+    self.textField.clearButtonMode = clearButtonMode;
+}
+
 - (void)setMaxLimit:(NSUInteger)maxLimit {
     self.textField.maxLimitNumber = maxLimit;
 }

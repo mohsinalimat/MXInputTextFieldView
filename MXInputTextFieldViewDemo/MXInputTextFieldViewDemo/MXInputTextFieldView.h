@@ -25,10 +25,12 @@
 @property (strong, nonatomic) UIColor *textColor;
 @property (strong, nonatomic) UIColor *tintColor;
 @property (assign, nonatomic) NSUInteger maxLimit;
+@property (assign, nonatomic) UITextFieldViewMode clearButtonMode;
 //激活键盘
 @property (assign, nonatomic) BOOL activity;
 
 /*********title*********/
+//如果为空，没有动画
 @property (copy, nonatomic) NSString *titleText;
 //默认白色
 @property (strong, nonatomic) UIColor *titleTextColor;
@@ -36,6 +38,8 @@
 @property (strong, nonatomic) UIFont *titleFont;
 
 /*********下划线*********/
+//默认为YES
 @property (assign, nonatomic) BOOL showSubline;
+//默认为白色，不透明
 @property (strong, nonatomic) UIColor *sublineColor;
 @end

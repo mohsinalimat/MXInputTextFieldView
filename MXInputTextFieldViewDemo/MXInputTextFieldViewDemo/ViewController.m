@@ -21,24 +21,30 @@
     self.view.backgroundColor = [UIColor orangeColor];
     self.tf1 = [[MXInputTextFieldView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-200)/2.0, 50, 200, 45)];
     
-    //self.tf1.placeholderColor = [UIColor yellowColor];
-    //self.tf1.placeholderFont = [UIFont systemFontOfSize:10];
+    self.tf1.leftImageName = @"phone";
+    
     self.tf1.placeholder = @"请输入手机号码";
+    self.tf1.placeholderColor = [UIColor yellowColor];
+    self.tf1.placeholderFont = [UIFont systemFontOfSize:13];
     
+    self.tf1.titleText = @"手机号";
+    self.tf1.titleFont = [UIFont systemFontOfSize:13];
     
-    //self.tf1.leftImageName = @"phone";
-    //self.tf1.textColor = [UIColor greenColor];
-    //self.tf1.titleText = @"手机号";
-    //self.tf1.titleFont = [UIFont systemFontOfSize:13];
     [self.view addSubview:_tf1];
     
     self.tf2 = [[MXInputTextFieldView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-200)/2.0, 50+45, 200, 45)];
-    self.tf2.placeholder = @"请输入密码";
+    
     self.tf2.leftImageName = @"password";
-    //self.tf2.textColor = [UIColor greenColor];
+    
+    self.tf2.placeholder = @"请输入密码";
+    
+    self.tf2.textColor = [UIColor redColor];
+    self.tf2.clearButtonMode = UITextFieldViewModeWhileEditing;
+    
     self.tf2.titleText = @"密码";
-    //self.tf2.titleTextColor = [UIColor grayColor];
-    //self.tf2.titleFont = [UIFont systemFontOfSize:13];
+    self.tf2.titleTextColor = [UIColor grayColor];
+    self.tf2.titleFont = [UIFont systemFontOfSize:13];
+    
     [self.view addSubview:_tf2];
 }
 
