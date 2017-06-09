@@ -6,7 +6,7 @@
 * 支持设置下划线
 * 支持动画
 ## 效果示例
-* ![无动画](https://github.com/iamhmx/MXScrollView/blob/master/MXScrollViewDemo/screenshots/none.gif)
+* ![效果图](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/tf.gif)
 ## 使用说明
 * 添加文件
     * 将MXInputTextFieldView.h、MXInputTextFieldView.m添加到项目中
