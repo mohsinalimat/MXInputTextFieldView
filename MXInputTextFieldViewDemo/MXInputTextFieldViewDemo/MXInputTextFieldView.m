@@ -14,34 +14,43 @@
 #define MXAnimationDuration 0.375
 
 @interface MXTextField : UITextField
-@property (assign, nonatomic) NSUInteger maxLimitNumber;
 @property (strong, nonatomic) UIFont *placeholderFont;
 @property (strong, nonatomic) UIColor *placeholderColor;
+@property (assign, nonatomic) CGFloat editOffestX;
+@property (assign, nonatomic) UITextFieldViewMode clearBtnMode;
 @end
 
 @implementation MXTextField
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        
+        self.editOffestX = 0;
     }
     return self;
 }
 
+//修复有清除按钮时，文本和清楚按钮重叠问题
+- (void)setClearBtnMode:(UITextFieldViewMode)clearBtnMode {
+    self.clearButtonMode = clearBtnMode;
+    if (clearBtnMode == UITextFieldViewModeNever) {
+        self.editOffestX = 0;
+    } else {
+        //存在清除按钮时，设置偏移量
+        self.editOffestX = 20;
+    }
+    [self layoutSubviews];
+}
+
 - (CGRect)textRectForBounds:(CGRect)bounds {
-    return CGRectInset(bounds, 2, 0);
+    return UIEdgeInsetsInsetRect(bounds, UIEdgeInsetsMake(0, 2, 0, self.editOffestX));//CGRectInset(bounds, 2, 0);
 }
 
 - (CGRect)placeholderRectForBounds:(CGRect)bounds {
-    return CGRectInset(bounds, 2, 0);
+    return UIEdgeInsetsInsetRect(bounds, UIEdgeInsetsMake(0, 2, 0, self.editOffestX));//CGRectInset(bounds, 2, 0);
 }
 
 - (CGRect)editingRectForBounds:(CGRect)bounds {
-    return CGRectInset(bounds, 2, 0);
-}
-
-- (void)setMaxLimitNumber:(NSUInteger)maxLimitNumber {
-    [self setValue:@(maxLimitNumber) forKeyPath:@"LimitInput"];
+    return UIEdgeInsetsInsetRect(bounds, UIEdgeInsetsMake(0, 2, 0, self.editOffestX));//CGRectInset(bounds, 2, 0);
 }
 
 - (void)setPlaceholderFont:(UIFont *)placeholderFont {
@@ -135,16 +144,17 @@
     self.textField.tintColor = tintColor;
 }
 
-- (void)setClearButtonMode:(UITextFieldViewMode)clearButtonMode {
-    self.textField.clearButtonMode = clearButtonMode;
+- (void)setClearMode:(UITextFieldViewMode)clearMode {
+    self.textField.clearBtnMode = clearMode;
 }
 
 - (void)setPassword:(BOOL)password {
     self.textField.secureTextEntry = password;
 }
 
-- (void)setMaxLimit:(NSUInteger)maxLimit {
-    self.textField.maxLimitNumber = maxLimit;
+- (void)setMaxLimit:(NSInteger)maxLimit {
+    _maxLimit = maxLimit < 0 ? 0 : maxLimit;
+    [self.textField addTarget:self action:@selector(limitInput:) forControlEvents:UIControlEventEditingChanged];
 }
 
 - (void)setTitleText:(NSString *)titleText {
@@ -178,6 +188,13 @@
 
 - (void)setSublineColor:(UIColor *)sublineColor {
     self.subline.backgroundColor = sublineColor;
+}
+
+#pragma mark Privite
+- (void)limitInput:(MXTextField*)tf {
+    if (tf.text.length > _maxLimit) {
+        tf.text = [tf.text substringToIndex:_maxLimit];
+    }
 }
 
 #pragma mark Getter

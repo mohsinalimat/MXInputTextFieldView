@@ -36,6 +36,8 @@
     self.tf.titleText = @"手机号";
     //设置title字体
     self.tf.titleFont = [UIFont systemFontOfSize:13];
+    //设置最大字数
+    self.tf.maxLimit = 8;
     
     /*设置更多属性，参考MXInputTextFieldView.h*/
     
@@ -44,7 +46,7 @@
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     //隐藏键盘
-    self.tf1.activity = NO;
+    self.tf.activity = NO;
 }
 
 @end

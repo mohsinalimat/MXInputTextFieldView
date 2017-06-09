@@ -6,41 +6,55 @@
 //  Copyright © 2017年 yellow. All rights reserved.
 //
 
+/*
+ github:https://github.com/iamhmx
+ */
+
 #import <UIKit/UIKit.h>
 
 @interface MXInputTextFieldView : UIView
 
-/*********leftImage*********/
+/*********Icon图标名*********/
 @property (copy, nonatomic) NSString *leftImageName;
 
-/*********placeholder*********/
+/*********Placeholder*********/
+//文本
 @property (copy, nonatomic) NSString *placeholder;
-//默认fontsize为15
+//字体，默认fontsize为15
 @property (strong, nonatomic) UIFont *placeholderFont;
+//颜色
 @property (strong, nonatomic) UIColor *placeholderColor;
 
-/*********textField*********/
+/*********TextField*********/
+//文本
 @property (copy, nonatomic) NSString *text;
+//字体
 @property (strong, nonatomic) UIFont *font;
+//文本颜色
 @property (strong, nonatomic) UIColor *textColor;
+//光标颜色
 @property (strong, nonatomic) UIColor *tintColor;
-@property (assign, nonatomic) NSUInteger maxLimit;
-@property (assign, nonatomic) UITextFieldViewMode clearButtonMode;
+//最大字数
+@property (assign, nonatomic) NSInteger maxLimit;
+//清除按钮模式
+@property (assign, nonatomic) UITextFieldViewMode clearMode;
 //激活键盘
 @property (assign, nonatomic) BOOL activity;
 
-/*********title*********/
-//如果为空，没有动画
+/*********Title*********/
+//文本，如果为空，没有动画
 @property (copy, nonatomic) NSString *titleText;
-//默认黑色
+//颜色，默认黑色
 @property (strong, nonatomic) UIColor *titleTextColor;
-//默认fontsize为15
+//字体，默认fontsize为15
 @property (strong, nonatomic) UIFont *titleFont;
-//密码
+//密码输入
 @property (assign, nonatomic) BOOL password;
+
 /*********下划线*********/
-//默认为YES
+//是否显示，默认为YES
 @property (assign, nonatomic) BOOL showSubline;
-//默认为白色，不透明
+//颜色，默认为白色，不透明
 @property (strong, nonatomic) UIColor *sublineColor;
+
 @end

@@ -33,6 +33,8 @@
     self.tf1.titleTextColor = [UIColor cyanColor];
     self.tf1.titleFont = [UIFont systemFontOfSize:10];
     
+    self.tf1.maxLimit = 8;
+    
     [self.view addSubview:_tf1];
     
     self.tf2 = [[MXInputTextFieldView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-200)/2.0, 50+45, 200, 45)];
@@ -44,7 +46,7 @@
     self.tf2.placeholderFont = [UIFont systemFontOfSize:13];
     
     self.tf2.textColor = [UIColor whiteColor];
-    self.tf2.clearButtonMode = UITextFieldViewModeWhileEditing;
+    self.tf2.clearMode = UITextFieldViewModeWhileEditing;
     self.tf2.password = YES;
     
     self.tf2.titleText = @"密码";
@@ -61,7 +63,7 @@
     self.tf3.placeholderFont = [UIFont systemFontOfSize:15];
     
     self.tf3.textColor = [UIColor whiteColor];
-    self.tf3.clearButtonMode = UITextFieldViewModeWhileEditing;
+    self.tf3.clearMode = UITextFieldViewModeWhileEditing;
     
     //不设置titleText，动画将消失
     //self.tf3.titleText = @"密码";
@@ -76,7 +78,7 @@
     self.tf4.placeholderFont = [UIFont systemFontOfSize:17];
     
     self.tf4.textColor = [UIColor whiteColor];
-    self.tf4.clearButtonMode = UITextFieldViewModeWhileEditing;
+    //self.tf4.clearButtonMode = UITextFieldViewModeWhileEditing;
     
     self.tf4.titleText = @"没有图标";
     self.tf4.titleFont = [UIFont systemFontOfSize:15];
