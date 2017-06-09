@@ -16,47 +16,35 @@
 #import "MXInputTextFieldView.h"
 
 @interface ViewController ()
-@property (strong, nonatomic) MXInputTextFieldView *tf1;
-@property (strong, nonatomic) MXInputTextFieldView *tf2;
+@property (strong, nonatomic) MXInputTextFieldView *tf;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tf1 = [[MXInputTextFieldView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-200)/2.0, 50, 200, 45)];
+    self.tf = [[MXInputTextFieldView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-200)/2.0, 50, 200, 45)];
+    //设置左icon
+    self.tf.leftImageName = @"phone";
+    //设置placeholder文本
+    self.tf.placeholder = @"请输入手机号码";
+    //设置placeholder颜色
+    self.tf.placeholderColor = [UIColor yellowColor];
+    //设置placeholder字体
+    self.tf.placeholderFont = [UIFont systemFontOfSize:13];
+    //设置title，若为空，则没有动画
+    self.tf.titleText = @"手机号";
+    //设置title字体
+    self.tf.titleFont = [UIFont systemFontOfSize:13];
     
-    self.tf1.leftImageName = @"phone";
+    /*设置更多属性，参考MXInputTextFieldView.h*/
     
-    self.tf1.placeholder = @"请输入手机号码";
-    self.tf1.placeholderColor = [UIColor yellowColor];
-    self.tf1.placeholderFont = [UIFont systemFontOfSize:13];
-    
-    self.tf1.titleText = @"手机号";
-    self.tf1.titleFont = [UIFont systemFontOfSize:13];
-    
-    [self.view addSubview:_tf1];
-    
-    self.tf2 = [[MXInputTextFieldView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-200)/2.0, 50+45, 200, 45)];
-    
-    self.tf2.leftImageName = @"password";
-    
-    self.tf2.placeholder = @"请输入密码";
-    
-    self.tf2.textColor = [UIColor redColor];
-    self.tf2.clearButtonMode = UITextFieldViewModeWhileEditing;
-    
-    self.tf2.titleText = @"密码";
-    self.tf2.titleTextColor = [UIColor grayColor];
-    self.tf2.titleFont = [UIFont systemFontOfSize:13];
-    
-    [self.view addSubview:_tf2];
+    [self.view addSubview:_tf];
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     //隐藏键盘
     self.tf1.activity = NO;
-    self.tf2.activity = NO;
 }
 
 @end
