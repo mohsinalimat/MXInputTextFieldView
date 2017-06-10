@@ -51,6 +51,7 @@ typedef void(^MXInputTextFieldReturnHandler)();
 @property (copy, nonatomic) MXInputTextFieldReturnHandler returnHandler;
 //开启键盘顶部视图，默认确定按钮
 @property (assign, nonatomic) BOOL hasSureButtonView;
+@property (strong, nonatomic) UIColor *sureButtonTitleColor;
 
 /*********Title*********/
 //文本，如果为空，没有动画

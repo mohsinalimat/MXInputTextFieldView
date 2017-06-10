@@ -17,6 +17,8 @@
 
 @interface MXInputView : UIView
 @property (copy, nonatomic) void(^sureHandler)(void);
+@property (strong, nonatomic) UIButton *sureBtn;
+@property (strong, nonatomic) UIColor *buttonTitleColor;
 @end
 
 @implementation MXInputView
@@ -27,12 +29,9 @@
         self.sureHandler = handler;
         CGFloat width = [UIScreen mainScreen].bounds.size.width;
         self.frame = CGRectMake(0, 0, width, 40);
-        UIButton *sureBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        sureBtn.frame = CGRectMake(width-70, 0, 70, 40);
-        [sureBtn setTitle:@"确定" forState:UIControlStateNormal];
-        [sureBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [sureBtn addTarget:self action:@selector(sureBtnClicked) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:sureBtn];
+    
+        [self addSubview:self.sureBtn];
+        
         UIView *subline = [[UIView alloc]initWithFrame:CGRectMake(0, 39.5, width, 0.5)];
         subline.backgroundColor = [UIColor lightGrayColor];
         [self addSubview:subline];
@@ -40,10 +39,25 @@
     return self;
 }
 
+- (void)setButtonTitleColor:(UIColor *)buttonTitleColor {
+    [self.sureBtn setTitleColor:buttonTitleColor forState:UIControlStateNormal];
+}
+
 - (void)sureBtnClicked {
     if (self.sureHandler) {
         self.sureHandler();
     }
+}
+
+- (UIButton *)sureBtn {
+    if (!_sureBtn) {
+        _sureBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _sureBtn.frame = CGRectMake([UIScreen mainScreen].bounds.size.width-70, 0, 70, 40);
+        [_sureBtn setTitle:@"确定" forState:UIControlStateNormal];
+        [_sureBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_sureBtn addTarget:self action:@selector(sureBtnClicked) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _sureBtn;
 }
 
 @end
@@ -54,6 +68,8 @@
 @property (assign, nonatomic) CGFloat editOffestX;
 @property (assign, nonatomic) UITextFieldViewMode clearBtnMode;
 @property (assign, nonatomic) BOOL showInputView;
+@property (strong, nonatomic) MXInputView *topView;
+@property (assign, nonatomic) UIColor *sureButtonColor;
 @end
 
 @implementation MXTextField
@@ -104,10 +120,18 @@
             @MXStrongObj(self);
             [self resignFirstResponder];
         }];
-        self.inputAccessoryView = inputView;
+        self.topView = inputView;
+        self.inputAccessoryView = _topView;
     } else {
         self.inputAccessoryView = nil;
     }
+}
+
+- (void)setSureButtonColor:(UIColor *)sureButtonColor {
+    if (!_topView) {
+        return;
+    }
+    self.topView.buttonTitleColor = sureButtonColor;
 }
 
 @end
@@ -219,6 +243,10 @@
     self.textField.showInputView = hasSureButtonView;
 }
 
+- (void)setSureButtonTitleColor:(UIColor *)sureButtonTitleColor {
+    self.textField.sureButtonColor = sureButtonTitleColor;
+}
+
 - (void)setTitleText:(NSString *)titleText {
     self.titleLabel.text = titleText;
     if (titleText && titleText.length > 0) {
@@ -306,6 +334,7 @@
     return YES;
 }
 
+//titleLabel动画，若title为空，无动画
 - (void)showTitleLabel:(BOOL)show {
     if (show) {
         self.titleLabel.alpha = 1;
