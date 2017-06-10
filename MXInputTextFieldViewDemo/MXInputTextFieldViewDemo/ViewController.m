@@ -20,7 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithRed:62/255.0 green:143/255.0 blue:242/255.0 alpha:1];
+    //self.view.backgroundColor = [UIColor colorWithRed:62/255.0 green:143/255.0 blue:242/255.0 alpha:1];
+    self.view.backgroundColor = [UIColor blackColor];
     self.tf1 = [[MXInputTextFieldView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-200)/2.0, 50, 200, 45)];
     
     self.tf1.leftImageName = @"phone";
@@ -30,10 +31,17 @@
     self.tf1.placeholderFont = [UIFont systemFontOfSize:10];
     
     self.tf1.titleText = @"手机号";
-    self.tf1.titleTextColor = [UIColor cyanColor];
+    self.tf1.titleTextColor = [UIColor redColor];
     self.tf1.titleFont = [UIFont systemFontOfSize:10];
     
     self.tf1.tintColor = [UIColor whiteColor];
+    
+    self.tf1.textColor = [UIColor whiteColor];
+    self.tf1.returnKeyType = UIReturnKeyNext;
+    self.tf1.returnHandler = ^{
+        NSLog(@"点击了return按钮");
+    };
+    self.tf1.hasSureButtonView = YES;
     
     self.tf1.maxLimit = 8;
     
@@ -52,9 +60,12 @@
     self.tf2.textColor = [UIColor whiteColor];
     self.tf2.clearMode = UITextFieldViewModeWhileEditing;
     self.tf2.password = YES;
+    self.tf2.keyboardType = UIKeyboardTypeNumberPad;
+    self.tf2.hasSureButtonView = YES;
     
     self.tf2.titleText = @"密码";
     self.tf2.titleFont = [UIFont systemFontOfSize:13];
+    self.tf2.titleTextColor = [UIColor yellowColor];
     
     [self.view addSubview:_tf2];
     
@@ -89,6 +100,7 @@
     self.tf4.tintColor = [UIColor whiteColor];
     
     self.tf4.titleText = @"没有图标";
+    self.tf4.titleTextColor = [UIColor greenColor];
     self.tf4.titleFont = [UIFont systemFontOfSize:15];
     
     [self.view addSubview:_tf4];

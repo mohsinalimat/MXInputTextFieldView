@@ -12,12 +12,45 @@
 #define MXTitleLabelHeight 20
 #define MXIconWidthAndHeight 20
 #define MXAnimationDuration 0.375
+#define MXWeakObj(o) autoreleasepool{} __weak typeof(o) o##Weak = o;
+#define MXStrongObj(o) autoreleasepool{} __strong typeof(o) o = o##Weak;
+
+@interface MXInputView : UIView
+@property (copy, nonatomic) void(^sureHandler)(void);
+@end
+
+@implementation MXInputView
+
+- (instancetype)initWithHandler:(void(^)(void))handler {
+    if (self = [super init]) {
+        self.backgroundColor = [UIColor whiteColor];
+        self.sureHandler = handler;
+        CGFloat width = [UIScreen mainScreen].bounds.size.width;
+        self.frame = CGRectMake(0, 0, width, 40);
+        UIButton *sureBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        sureBtn.frame = CGRectMake(width-70, 0, 70, 40);
+        [sureBtn setTitle:@"确定" forState:UIControlStateNormal];
+        [sureBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [sureBtn addTarget:self action:@selector(sureBtnClicked) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:sureBtn];
+    }
+    return self;
+}
+
+- (void)sureBtnClicked {
+    if (self.sureHandler) {
+        self.sureHandler();
+    }
+}
+
+@end
 
 @interface MXTextField : UITextField
 @property (strong, nonatomic) UIFont *placeholderFont;
 @property (strong, nonatomic) UIColor *placeholderColor;
 @property (assign, nonatomic) CGFloat editOffestX;
 @property (assign, nonatomic) UITextFieldViewMode clearBtnMode;
+@property (assign, nonatomic) BOOL showInputView;
 @end
 
 @implementation MXTextField
@@ -59,6 +92,19 @@
 
 - (void)setPlaceholderColor:(UIColor *)placeholderColor {
     [self setValue:placeholderColor forKeyPath:@"_placeholderLabel.textColor"];
+}
+
+- (void)setShowInputView:(BOOL)showInputView {
+    if (showInputView) {
+        @MXWeakObj(self);
+        MXInputView *inputView = [[MXInputView alloc]initWithHandler:^{
+            @MXStrongObj(self);
+            [self resignFirstResponder];
+        }];
+        self.inputAccessoryView = inputView;
+    } else {
+        self.inputAccessoryView = nil;
+    }
 }
 
 @end
@@ -157,6 +203,18 @@
     [self.textField addTarget:self action:@selector(limitInput:) forControlEvents:UIControlEventEditingChanged];
 }
 
+- (void)setKeyboardType:(UIKeyboardType)keyboardType {
+    self.textField.keyboardType = keyboardType;
+}
+
+- (void)setReturnKeyType:(UIReturnKeyType)returnKeyType {
+    self.textField.returnKeyType = returnKeyType;
+}
+
+- (void)setHasSureButtonView:(BOOL)hasSureButtonView {
+    self.textField.showInputView = hasSureButtonView;
+}
+
 - (void)setTitleText:(NSString *)titleText {
     self.titleLabel.text = titleText;
     if (titleText && titleText.length > 0) {
@@ -235,6 +293,13 @@
         self.iconImageView.frame = CGRectMake(0, (self.contentFrame.size.height-18)/2.0, 18, 18);
         self.textField.frame = CGRectMake(self.textFieldX, (self.contentFrame.size.height-self.textFieldHeight)/2.0, self.textFieldWidth, self.textFieldHeight);
     }];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (self.returnHandler) {
+        self.returnHandler();
+    }
+    return YES;
 }
 
 - (void)showTitleLabel:(BOOL)show {

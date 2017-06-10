@@ -12,6 +12,9 @@
 
 #import <UIKit/UIKit.h>
 
+//键盘return按键事件
+typedef void(^MXInputTextFieldReturnHandler)();
+
 @interface MXInputTextFieldView : UIView
 
 /*********Icon图标名*********/
@@ -40,6 +43,14 @@
 @property (assign, nonatomic) UITextFieldViewMode clearMode;
 //激活键盘
 @property (assign, nonatomic) BOOL activity;
+//键盘模式
+@property (assign, nonatomic) UIKeyboardType keyboardType;
+//return键类型
+@property (assign, nonatomic) UIReturnKeyType returnKeyType;
+//return键事件
+@property (copy, nonatomic) MXInputTextFieldReturnHandler returnHandler;
+//开启键盘顶部视图，默认确定按钮
+@property (assign, nonatomic) BOOL hasSureButtonView;
 
 /*********Title*********/
 //文本，如果为空，没有动画
