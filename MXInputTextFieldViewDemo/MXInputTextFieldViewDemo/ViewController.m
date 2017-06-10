@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor orangeColor];
+    self.view.backgroundColor = [UIColor colorWithRed:62/255.0 green:143/255.0 blue:242/255.0 alpha:1];
     self.tf1 = [[MXInputTextFieldView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-200)/2.0, 50, 200, 45)];
     
     self.tf1.leftImageName = @"phone";
@@ -33,6 +33,8 @@
     self.tf1.titleTextColor = [UIColor cyanColor];
     self.tf1.titleFont = [UIFont systemFontOfSize:10];
     
+    self.tf1.tintColor = [UIColor whiteColor];
+    
     self.tf1.maxLimit = 8;
     
     [self.view addSubview:_tf1];
@@ -44,6 +46,8 @@
     self.tf2.placeholder = @"请输入密码";
     self.tf2.placeholderColor = [UIColor yellowColor];
     self.tf2.placeholderFont = [UIFont systemFontOfSize:13];
+    
+    self.tf2.tintColor = [UIColor whiteColor];
     
     self.tf2.textColor = [UIColor whiteColor];
     self.tf2.clearMode = UITextFieldViewModeWhileEditing;
@@ -62,6 +66,8 @@
     self.tf3.placeholderColor = [UIColor blueColor];
     self.tf3.placeholderFont = [UIFont systemFontOfSize:15];
     
+    self.tf3.tintColor = [UIColor whiteColor];
+    
     self.tf3.textColor = [UIColor whiteColor];
     self.tf3.clearMode = UITextFieldViewModeWhileEditing;
     
@@ -79,6 +85,8 @@
     
     self.tf4.textColor = [UIColor whiteColor];
     //self.tf4.clearButtonMode = UITextFieldViewModeWhileEditing;
+    
+    self.tf4.tintColor = [UIColor whiteColor];
     
     self.tf4.titleText = @"没有图标";
     self.tf4.titleFont = [UIFont systemFontOfSize:15];
