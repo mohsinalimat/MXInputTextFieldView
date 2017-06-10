@@ -33,6 +33,9 @@
         [sureBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [sureBtn addTarget:self action:@selector(sureBtnClicked) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:sureBtn];
+        UIView *subline = [[UIView alloc]initWithFrame:CGRectMake(0, 39.5, width, 0.5)];
+        subline.backgroundColor = [UIColor lightGrayColor];
+        [self addSubview:subline];
     }
     return self;
 }
@@ -165,6 +168,7 @@
 }
 
 - (void)setPlaceholderFont:(UIFont *)placeholderFont {
+    //默认15号字体
     _placeholderFont = placeholderFont;
     self.refreshPlaceholder = YES;
 }
