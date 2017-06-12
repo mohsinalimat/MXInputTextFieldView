@@ -18,14 +18,15 @@ typedef void(^MXInputTextFieldReturnHandler)();
 @interface MXInputTextFieldView : UIView
 
 /*********Icon图标名*********/
-@property (copy, nonatomic) NSString *leftImageName;
+//默认为nil
+@property (copy, nonatomic) NSString *iconName;
 
 /*********Placeholder*********/
-//文本
+//文本，默认为nil
 @property (copy, nonatomic) NSString *placeholder;
 //字体，默认fontsize为15
 @property (strong, nonatomic) UIFont *placeholderFont;
-//颜色
+//颜色，默认为gray，70% opacity
 @property (strong, nonatomic) UIColor *placeholderColor;
 
 /*********TextField*********/
@@ -60,13 +61,13 @@ typedef void(^MXInputTextFieldReturnHandler)();
 @property (strong, nonatomic) UIColor *titleTextColor;
 //字体，默认fontsize为15
 @property (strong, nonatomic) UIFont *titleFont;
-//密码输入
-@property (assign, nonatomic) BOOL password;
+//密码输入，默认为NO
+@property (assign, nonatomic) BOOL isPassword;
 
 /*********下划线*********/
 //是否显示，默认为YES
 @property (assign, nonatomic) BOOL showSubline;
-//颜色，默认为白色，不透明
+//颜色，默认为白色，70%透明
 @property (strong, nonatomic) UIColor *sublineColor;
 
 @end

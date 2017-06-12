@@ -76,9 +76,32 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
+        [self addObserver:self forKeyPath:@"editOffestX" options:NSKeyValueObservingOptionNew context:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willShow) name:UIKeyboardWillShowNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willHide) name:UIKeyboardWillHideNotification object:nil];
         self.editOffestX = 0;
     }
     return self;
+}
+
+- (void)willShow {
+    if (!self.editing) {
+        return;
+    }
+    if (self.clearButtonMode == UITextFieldViewModeNever) {
+        return;
+    }
+    self.editOffestX = 20;
+}
+
+- (void)willHide {
+    if (!self.editing) {
+        return;
+    }
+    if (self.clearButtonMode == UITextFieldViewModeNever) {
+        return;
+    }
+    self.editOffestX = 0;
 }
 
 //修复有清除按钮时，文本和清楚按钮重叠问题
@@ -90,7 +113,12 @@
         //存在清除按钮时，设置偏移量
         self.editOffestX = 20;
     }
-    [self layoutSubviews];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"editOffestX"]) {
+        [self layoutSubviews];
+    }
 }
 
 - (CGRect)textRectForBounds:(CGRect)bounds {
@@ -134,6 +162,10 @@
     self.topView.buttonTitleColor = sureButtonColor;
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 @end
 
 @interface MXInputTextFieldView ()<UITextFieldDelegate>
@@ -172,16 +204,16 @@
         [self addSubview:_textField];
         
         self.subline = [[UIView alloc]initWithFrame:CGRectMake(0, frame.size.height-0.5, frame.size.width, 0.5)];
-        self.subline.backgroundColor = [UIColor whiteColor];
+        self.subline.backgroundColor = [UIColor colorWithWhite:1 alpha:0.7];
         [self addSubview:_subline];
     }
     return self;
 }
 
 #pragma mark Setter
-- (void)setLeftImageName:(NSString *)leftImageName {
-    _leftImageName = leftImageName;
-    self.iconImageView.image = [UIImage imageNamed:leftImageName];
+- (void)setIconName:(NSString *)iconName {
+    _iconName = iconName;
+    self.iconImageView.image = [UIImage imageNamed:iconName];
     //设置图片后，调整textfield位置
     self.textField.frame = CGRectMake(self.textFieldX, (self.contentFrame.size.height-self.textFieldHeight)/2.0, self.textFieldWidth, self.textFieldHeight);
 }
@@ -222,8 +254,8 @@
     self.textField.clearBtnMode = clearMode;
 }
 
-- (void)setPassword:(BOOL)password {
-    self.textField.secureTextEntry = password;
+- (void)setIsPassword:(BOOL)isPassword {
+    self.textField.secureTextEntry = isPassword;
 }
 
 - (void)setMaxLimit:(NSInteger)maxLimit {
@@ -293,7 +325,7 @@
 }
 
 - (CGFloat)textFieldX {
-    return self.leftImageName.length > 0 ? MXIconWidthAndHeight : 0;
+    return self.iconName.length > 0 ? MXIconWidthAndHeight : 0;
 }
 
 - (CGFloat)textFieldHeight {
@@ -301,7 +333,7 @@
 }
 
 - (CGFloat)textFieldWidth {
-    return  self.contentFrame.size.width - (self.leftImageName.length > 0 ? MXIconWidthAndHeight : 0);
+    return  self.contentFrame.size.width - (self.iconName.length > 0 ? MXIconWidthAndHeight : 0);
 }
 
 #pragma mark TextFieldDelegate

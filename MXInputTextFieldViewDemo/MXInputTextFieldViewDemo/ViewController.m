@@ -25,7 +25,7 @@
     //self.view.backgroundColor = [UIColor brownColor];
     self.tf1 = [[MXInputTextFieldView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-200)/2.0, 50, 200, 45)];
     
-    self.tf1.leftImageName = @"phone";
+    self.tf1.iconName = @"phone";
     
     self.tf1.placeholder = @"请输入手机号码";
     self.tf1.placeholderColor = [UIColor redColor];
@@ -51,7 +51,7 @@
     
     self.tf2 = [[MXInputTextFieldView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-200)/2.0, 50+45, 200, 45)];
     
-    self.tf2.leftImageName = @"password";
+    self.tf2.iconName = @"password";
     
     self.tf2.placeholder = @"请输入密码";
     self.tf2.placeholderColor = [UIColor yellowColor];
@@ -61,7 +61,7 @@
     
     self.tf2.textColor = [UIColor whiteColor];
     self.tf2.clearMode = UITextFieldViewModeWhileEditing;
-    self.tf2.password = YES;
+    self.tf2.isPassword = YES;
     self.tf2.keyboardType = UIKeyboardTypeNumberPad;
     self.tf2.hasSureButtonView = YES;
     
@@ -73,7 +73,7 @@
     
     self.tf3 = [[MXInputTextFieldView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-200)/2.0, 50+45+45, 200, 45)];
     
-    self.tf3.leftImageName = @"edit";
+    self.tf3.iconName = @"edit";
     
     self.tf3.placeholder = @"我没有动画";
     self.tf3.placeholderColor = [UIColor orangeColor];
