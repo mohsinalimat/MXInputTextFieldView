@@ -12,7 +12,7 @@
 * ![效果图](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/tf.gif)
 ## 使用说明
 * 添加文件
-    * 将MXInputTextFieldView.h、MXInputTextFieldView.m添加到项目中
+    * 将工程中MXInputTextFieldClass文件夹内容添加到项目中
 * 添加代码
 ```objc
 /*ViewController.m*/
