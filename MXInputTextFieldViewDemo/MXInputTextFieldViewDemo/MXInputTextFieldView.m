@@ -8,165 +8,10 @@
 
 #import "MXInputTextFieldView.h"
 #import <Masonry/Masonry.h>
-
-#define MXTitleLabelHeight 20
-#define MXIconWidthAndHeight 20
-#define MXAnimationDuration 0.375
-#define MXWeakObj(o) autoreleasepool{} __weak typeof(o) o##Weak = o;
-#define MXStrongObj(o) autoreleasepool{} __strong typeof(o) o = o##Weak;
-
-@interface MXInputView : UIView
-@property (copy, nonatomic) void(^sureHandler)(void);
-@property (strong, nonatomic) UIButton *sureBtn;
-@property (strong, nonatomic) UIColor *buttonTitleColor;
-@end
-
-@implementation MXInputView
-
-- (instancetype)initWithHandler:(void(^)(void))handler {
-    if (self = [super init]) {
-        self.backgroundColor = [UIColor whiteColor];
-        self.sureHandler = handler;
-        CGFloat width = [UIScreen mainScreen].bounds.size.width;
-        self.frame = CGRectMake(0, 0, width, 40);
-    
-        [self addSubview:self.sureBtn];
-        
-        UIView *subline = [[UIView alloc]initWithFrame:CGRectMake(0, 39.5, width, 0.5)];
-        subline.backgroundColor = [UIColor lightGrayColor];
-        [self addSubview:subline];
-    }
-    return self;
-}
-
-- (void)setButtonTitleColor:(UIColor *)buttonTitleColor {
-    [self.sureBtn setTitleColor:buttonTitleColor forState:UIControlStateNormal];
-}
-
-- (void)sureBtnClicked {
-    if (self.sureHandler) {
-        self.sureHandler();
-    }
-}
-
-- (UIButton *)sureBtn {
-    if (!_sureBtn) {
-        _sureBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _sureBtn.frame = CGRectMake([UIScreen mainScreen].bounds.size.width-70, 0, 70, 40);
-        [_sureBtn setTitle:@"确定" forState:UIControlStateNormal];
-        [_sureBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_sureBtn addTarget:self action:@selector(sureBtnClicked) forControlEvents:UIControlEventTouchUpInside];
-    }
-    return _sureBtn;
-}
-
-@end
-
-@interface MXTextField : UITextField
-@property (strong, nonatomic) UIFont *placeholderFont;
-@property (strong, nonatomic) UIColor *placeholderColor;
-@property (assign, nonatomic) CGFloat editOffestX;
-@property (assign, nonatomic) UITextFieldViewMode clearBtnMode;
-@property (assign, nonatomic) BOOL showInputView;
-@property (strong, nonatomic) MXInputView *topView;
-@property (assign, nonatomic) UIColor *sureButtonColor;
-@end
-
-@implementation MXTextField
-
-- (instancetype)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
-        [self addObserver:self forKeyPath:@"editOffestX" options:NSKeyValueObservingOptionNew context:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willShow) name:UIKeyboardWillShowNotification object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willHide) name:UIKeyboardWillHideNotification object:nil];
-        self.editOffestX = 0;
-    }
-    return self;
-}
-
-- (void)willShow {
-    if (!self.editing) {
-        return;
-    }
-    if (self.clearButtonMode == UITextFieldViewModeNever) {
-        return;
-    }
-    self.editOffestX = 20;
-}
-
-- (void)willHide {
-    if (!self.editing) {
-        return;
-    }
-    if (self.clearButtonMode == UITextFieldViewModeNever) {
-        return;
-    }
-    self.editOffestX = 0;
-}
-
-//修复有清除按钮时，文本和清楚按钮重叠问题
-- (void)setClearBtnMode:(UITextFieldViewMode)clearBtnMode {
-    self.clearButtonMode = clearBtnMode;
-    if (clearBtnMode == UITextFieldViewModeNever) {
-        self.editOffestX = 0;
-    } else {
-        //存在清除按钮时，设置偏移量
-        self.editOffestX = 20;
-    }
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    if ([keyPath isEqualToString:@"editOffestX"]) {
-        [self layoutSubviews];
-    }
-}
-
-- (CGRect)textRectForBounds:(CGRect)bounds {
-    return UIEdgeInsetsInsetRect(bounds, UIEdgeInsetsMake(0, 2, 0, self.editOffestX));//CGRectInset(bounds, 2, 0);
-}
-
-- (CGRect)placeholderRectForBounds:(CGRect)bounds {
-    return UIEdgeInsetsInsetRect(bounds, UIEdgeInsetsMake(0, 2, 0, self.editOffestX));//CGRectInset(bounds, 2, 0);
-}
-
-- (CGRect)editingRectForBounds:(CGRect)bounds {
-    return UIEdgeInsetsInsetRect(bounds, UIEdgeInsetsMake(0, 2, 0, self.editOffestX));//CGRectInset(bounds, 2, 0);
-}
-
-- (void)setPlaceholderFont:(UIFont *)placeholderFont {
-    [self setValue:placeholderFont forKeyPath:@"_placeholderLabel.font"];
-}
-
-- (void)setPlaceholderColor:(UIColor *)placeholderColor {
-    [self setValue:placeholderColor forKeyPath:@"_placeholderLabel.textColor"];
-}
-
-- (void)setShowInputView:(BOOL)showInputView {
-    if (showInputView) {
-        @MXWeakObj(self);
-        MXInputView *inputView = [[MXInputView alloc]initWithHandler:^{
-            @MXStrongObj(self);
-            [self resignFirstResponder];
-        }];
-        self.topView = inputView;
-        self.inputAccessoryView = _topView;
-    } else {
-        self.inputAccessoryView = nil;
-    }
-}
-
-- (void)setSureButtonColor:(UIColor *)sureButtonColor {
-    if (!_topView) {
-        return;
-    }
-    self.topView.buttonTitleColor = sureButtonColor;
-}
-
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-@end
+#import "MXTextFieldManager.h"
+#import "MXInputTextFieldHeader.h"
+#import "MXInputView.h"
+#import "MXTextField.h"
 
 @interface MXInputTextFieldView ()<UITextFieldDelegate>
 @property (assign, nonatomic) CGRect contentFrame;
@@ -275,6 +120,10 @@
     self.textField.showInputView = hasSureButtonView;
 }
 
+- (void)setSureButtonTitle:(NSString *)sureButtonTitle {
+    self.textField.sureButtonTitle = sureButtonTitle;
+}
+
 - (void)setSureButtonTitleColor:(UIColor *)sureButtonTitleColor {
     self.textField.sureButtonColor = sureButtonTitleColor;
 }
@@ -338,6 +187,7 @@
 
 #pragma mark TextFieldDelegate
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
+    [MXTextFieldManager sharedInstance].currentTextField = (MXTextField*)textField;
     if (!self.animation) {
         return;
     }
@@ -349,6 +199,7 @@
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
+    [MXTextFieldManager sharedInstance].previousTextField = (MXTextField*)textField;
     if (!self.animation) {
         return;
     }

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		178C23875206F0602B0A9D7F /* libPods-MXInputTextFieldViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 010F17FB9EE0F58E3FAEA0DB /* libPods-MXInputTextFieldViewDemo.a */; };
+		90B02EA61EEE5CC40061115B /* MXTextFieldManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B02EA51EEE5CC40061115B /* MXTextFieldManager.m */; };
+		90B02EA91EEE602C0061115B /* MXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B02EA81EEE602C0061115B /* MXTextField.m */; };
+		90B02EAC1EEE60860061115B /* MXInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B02EAB1EEE60860061115B /* MXInputView.m */; };
 		90D5BA9E1EE7B02C000E3830 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D5BA9D1EE7B02C000E3830 /* main.m */; };
 		90D5BAA11EE7B02C000E3830 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D5BAA01EE7B02C000E3830 /* AppDelegate.m */; };
 		90D5BAA41EE7B02C000E3830 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D5BAA31EE7B02C000E3830 /* ViewController.m */; };
@@ -20,6 +23,13 @@
 /* Begin PBXFileReference section */
 		010F17FB9EE0F58E3FAEA0DB /* libPods-MXInputTextFieldViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MXInputTextFieldViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29DFA0FA783B5FF15FD53244 /* Pods-MXInputTextFieldViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MXInputTextFieldViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MXInputTextFieldViewDemo/Pods-MXInputTextFieldViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		90B02EA41EEE5CC40061115B /* MXTextFieldManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXTextFieldManager.h; sourceTree = "<group>"; };
+		90B02EA51EEE5CC40061115B /* MXTextFieldManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXTextFieldManager.m; sourceTree = "<group>"; };
+		90B02EA71EEE602C0061115B /* MXTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXTextField.h; sourceTree = "<group>"; };
+		90B02EA81EEE602C0061115B /* MXTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXTextField.m; sourceTree = "<group>"; };
+		90B02EAA1EEE60860061115B /* MXInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXInputView.h; sourceTree = "<group>"; };
+		90B02EAB1EEE60860061115B /* MXInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXInputView.m; sourceTree = "<group>"; };
+		90B02EAD1EEE60E50061115B /* MXInputTextFieldHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXInputTextFieldHeader.h; sourceTree = "<group>"; };
 		90D5BA991EE7B02C000E3830 /* MXInputTextFieldViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MXInputTextFieldViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D5BA9D1EE7B02C000E3830 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90D5BA9F1EE7B02C000E3830 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -77,8 +87,15 @@
 		90D5BA9B1EE7B02C000E3830 /* MXInputTextFieldViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				90B02EAD1EEE60E50061115B /* MXInputTextFieldHeader.h */,
 				90D5BAB31EE7B0D2000E3830 /* MXInputTextFieldView.h */,
 				90D5BAB41EE7B0D2000E3830 /* MXInputTextFieldView.m */,
+				90B02EA71EEE602C0061115B /* MXTextField.h */,
+				90B02EA81EEE602C0061115B /* MXTextField.m */,
+				90B02EAA1EEE60860061115B /* MXInputView.h */,
+				90B02EAB1EEE60860061115B /* MXInputView.m */,
+				90B02EA41EEE5CC40061115B /* MXTextFieldManager.h */,
+				90B02EA51EEE5CC40061115B /* MXTextFieldManager.m */,
 				90D5BA9F1EE7B02C000E3830 /* AppDelegate.h */,
 				90D5BAA01EE7B02C000E3830 /* AppDelegate.m */,
 				90D5BAA21EE7B02C000E3830 /* ViewController.h */,
@@ -231,7 +248,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90B02EAC1EEE60860061115B /* MXInputView.m in Sources */,
+				90B02EA91EEE602C0061115B /* MXTextField.m in Sources */,
 				90D5BAA41EE7B02C000E3830 /* ViewController.m in Sources */,
+				90B02EA61EEE5CC40061115B /* MXTextFieldManager.m in Sources */,
 				90D5BAA11EE7B02C000E3830 /* AppDelegate.m in Sources */,
 				90D5BAB51EE7B0D2000E3830 /* MXInputTextFieldView.m in Sources */,
 				90D5BA9E1EE7B02C000E3830 /* main.m in Sources */,
@@ -395,6 +415,7 @@
 				90D5BAB21EE7B02C000E3830 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

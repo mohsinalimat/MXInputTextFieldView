@@ -52,6 +52,9 @@ typedef void(^MXInputTextFieldReturnHandler)();
 @property (copy, nonatomic) MXInputTextFieldReturnHandler returnHandler;
 //开启键盘顶部视图，默认确定按钮
 @property (assign, nonatomic) BOOL hasSureButtonView;
+//设置确认按钮文本，默认“确定”
+@property (copy, nonatomic) NSString *sureButtonTitle;
+//设置确认按钮颜色，默认黑色
 @property (strong, nonatomic) UIColor *sureButtonTitleColor;
 
 /*********Title*********/

@@ -43,6 +43,7 @@
         NSLog(@"点击了return按钮");
     };
     self.tf1.hasSureButtonView = YES;
+    self.tf1.sureButtonTitle = @"搞事情";
     self.tf1.sureButtonTitleColor = [UIColor orangeColor];
     
     self.tf1.maxLimit = 8;
