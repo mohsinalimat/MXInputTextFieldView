@@ -8,28 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		178C23875206F0602B0A9D7F /* libPods-MXInputTextFieldViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 010F17FB9EE0F58E3FAEA0DB /* libPods-MXInputTextFieldViewDemo.a */; };
-		90B02EA61EEE5CC40061115B /* MXTextFieldManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B02EA51EEE5CC40061115B /* MXTextFieldManager.m */; };
-		90B02EA91EEE602C0061115B /* MXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B02EA81EEE602C0061115B /* MXTextField.m */; };
-		90B02EAC1EEE60860061115B /* MXInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B02EAB1EEE60860061115B /* MXInputView.m */; };
+		90B02EBA1EEE87F00061115B /* MXInputTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B02EB11EEE87F00061115B /* MXInputTextFieldView.m */; };
+		90B02EBB1EEE87F00061115B /* MXInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B02EB31EEE87F00061115B /* MXInputView.m */; };
+		90B02EBC1EEE87F00061115B /* MXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B02EB51EEE87F00061115B /* MXTextField.m */; };
+		90B02EBD1EEE87F00061115B /* MXTextFieldManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B02EB71EEE87F00061115B /* MXTextFieldManager.m */; };
 		90D5BA9E1EE7B02C000E3830 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D5BA9D1EE7B02C000E3830 /* main.m */; };
 		90D5BAA11EE7B02C000E3830 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D5BAA01EE7B02C000E3830 /* AppDelegate.m */; };
 		90D5BAA41EE7B02C000E3830 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D5BAA31EE7B02C000E3830 /* ViewController.m */; };
 		90D5BAA71EE7B02C000E3830 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D5BAA51EE7B02C000E3830 /* Main.storyboard */; };
 		90D5BAA91EE7B02C000E3830 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90D5BAA81EE7B02C000E3830 /* Assets.xcassets */; };
 		90D5BAAC1EE7B02C000E3830 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D5BAAA1EE7B02C000E3830 /* LaunchScreen.storyboard */; };
-		90D5BAB51EE7B0D2000E3830 /* MXInputTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D5BAB41EE7B0D2000E3830 /* MXInputTextFieldView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		010F17FB9EE0F58E3FAEA0DB /* libPods-MXInputTextFieldViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MXInputTextFieldViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29DFA0FA783B5FF15FD53244 /* Pods-MXInputTextFieldViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MXInputTextFieldViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MXInputTextFieldViewDemo/Pods-MXInputTextFieldViewDemo.release.xcconfig"; sourceTree = "<group>"; };
-		90B02EA41EEE5CC40061115B /* MXTextFieldManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXTextFieldManager.h; sourceTree = "<group>"; };
-		90B02EA51EEE5CC40061115B /* MXTextFieldManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXTextFieldManager.m; sourceTree = "<group>"; };
-		90B02EA71EEE602C0061115B /* MXTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXTextField.h; sourceTree = "<group>"; };
-		90B02EA81EEE602C0061115B /* MXTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXTextField.m; sourceTree = "<group>"; };
-		90B02EAA1EEE60860061115B /* MXInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXInputView.h; sourceTree = "<group>"; };
-		90B02EAB1EEE60860061115B /* MXInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXInputView.m; sourceTree = "<group>"; };
-		90B02EAD1EEE60E50061115B /* MXInputTextFieldHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXInputTextFieldHeader.h; sourceTree = "<group>"; };
+		90B02EAF1EEE87F00061115B /* MXInputTextFieldHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXInputTextFieldHeader.h; sourceTree = "<group>"; };
+		90B02EB01EEE87F00061115B /* MXInputTextFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXInputTextFieldView.h; sourceTree = "<group>"; };
+		90B02EB11EEE87F00061115B /* MXInputTextFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXInputTextFieldView.m; sourceTree = "<group>"; };
+		90B02EB21EEE87F00061115B /* MXInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXInputView.h; sourceTree = "<group>"; };
+		90B02EB31EEE87F00061115B /* MXInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXInputView.m; sourceTree = "<group>"; };
+		90B02EB41EEE87F00061115B /* MXTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXTextField.h; sourceTree = "<group>"; };
+		90B02EB51EEE87F00061115B /* MXTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXTextField.m; sourceTree = "<group>"; };
+		90B02EB61EEE87F00061115B /* MXTextFieldManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXTextFieldManager.h; sourceTree = "<group>"; };
+		90B02EB71EEE87F00061115B /* MXTextFieldManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXTextFieldManager.m; sourceTree = "<group>"; };
 		90D5BA991EE7B02C000E3830 /* MXInputTextFieldViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MXInputTextFieldViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D5BA9D1EE7B02C000E3830 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90D5BA9F1EE7B02C000E3830 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,8 +42,6 @@
 		90D5BAA81EE7B02C000E3830 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90D5BAAB1EE7B02C000E3830 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90D5BAAD1EE7B02C000E3830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90D5BAB31EE7B0D2000E3830 /* MXInputTextFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXInputTextFieldView.h; sourceTree = "<group>"; };
-		90D5BAB41EE7B0D2000E3830 /* MXInputTextFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXInputTextFieldView.m; sourceTree = "<group>"; };
 		CE55005FB5D9457D39811C57 /* Pods-MXInputTextFieldViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MXInputTextFieldViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MXInputTextFieldViewDemo/Pods-MXInputTextFieldViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +66,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		90B02EAE1EEE87C10061115B /* MXInputTextFieldClass */ = {
+			isa = PBXGroup;
+			children = (
+				90B02EAF1EEE87F00061115B /* MXInputTextFieldHeader.h */,
+				90B02EB01EEE87F00061115B /* MXInputTextFieldView.h */,
+				90B02EB11EEE87F00061115B /* MXInputTextFieldView.m */,
+				90B02EB21EEE87F00061115B /* MXInputView.h */,
+				90B02EB31EEE87F00061115B /* MXInputView.m */,
+				90B02EB41EEE87F00061115B /* MXTextField.h */,
+				90B02EB51EEE87F00061115B /* MXTextField.m */,
+				90B02EB61EEE87F00061115B /* MXTextFieldManager.h */,
+				90B02EB71EEE87F00061115B /* MXTextFieldManager.m */,
+			);
+			path = MXInputTextFieldClass;
+			sourceTree = "<group>";
+		};
 		90D5BA901EE7B02C000E3830 = {
 			isa = PBXGroup;
 			children = (
@@ -87,15 +103,7 @@
 		90D5BA9B1EE7B02C000E3830 /* MXInputTextFieldViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				90B02EAD1EEE60E50061115B /* MXInputTextFieldHeader.h */,
-				90D5BAB31EE7B0D2000E3830 /* MXInputTextFieldView.h */,
-				90D5BAB41EE7B0D2000E3830 /* MXInputTextFieldView.m */,
-				90B02EA71EEE602C0061115B /* MXTextField.h */,
-				90B02EA81EEE602C0061115B /* MXTextField.m */,
-				90B02EAA1EEE60860061115B /* MXInputView.h */,
-				90B02EAB1EEE60860061115B /* MXInputView.m */,
-				90B02EA41EEE5CC40061115B /* MXTextFieldManager.h */,
-				90B02EA51EEE5CC40061115B /* MXTextFieldManager.m */,
+				90B02EAE1EEE87C10061115B /* MXInputTextFieldClass */,
 				90D5BA9F1EE7B02C000E3830 /* AppDelegate.h */,
 				90D5BAA01EE7B02C000E3830 /* AppDelegate.m */,
 				90D5BAA21EE7B02C000E3830 /* ViewController.h */,
@@ -248,12 +256,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90B02EAC1EEE60860061115B /* MXInputView.m in Sources */,
-				90B02EA91EEE602C0061115B /* MXTextField.m in Sources */,
+				90B02EBD1EEE87F00061115B /* MXTextFieldManager.m in Sources */,
+				90B02EBC1EEE87F00061115B /* MXTextField.m in Sources */,
+				90B02EBA1EEE87F00061115B /* MXInputTextFieldView.m in Sources */,
 				90D5BAA41EE7B02C000E3830 /* ViewController.m in Sources */,
-				90B02EA61EEE5CC40061115B /* MXTextFieldManager.m in Sources */,
 				90D5BAA11EE7B02C000E3830 /* AppDelegate.m in Sources */,
-				90D5BAB51EE7B0D2000E3830 /* MXInputTextFieldView.m in Sources */,
+				90B02EBB1EEE87F00061115B /* MXInputView.m in Sources */,
 				90D5BA9E1EE7B02C000E3830 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
