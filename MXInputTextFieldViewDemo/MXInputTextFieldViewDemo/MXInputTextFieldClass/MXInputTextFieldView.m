@@ -31,26 +31,16 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         self.contentFrame = frame;
-        
+        //添加观察者，刷新placeholder
         [self addObserver:self forKeyPath:@"refreshPlaceholder" options:NSKeyValueObservingOptionNew context:nil];
-        
-        self.titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(2, MXTitleLabelHeight, frame.size.width, MXTitleLabelHeight)];
-        self.titleLabel.alpha = 0;
-        self.titleLabel.font = [UIFont systemFontOfSize:15];
-        [self addSubview:_titleLabel];
-        
-        self.iconImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, (frame.size.height-MXIconWidthAndHeight)/2.0, MXIconWidthAndHeight, MXIconWidthAndHeight)];
-        self.iconImageView.contentMode = UIViewContentModeScaleAspectFit;
-        [self addSubview:_iconImageView];
-        
-        self.textField = [[MXTextField alloc]initWithFrame:CGRectMake(self.textFieldX, (frame.size.height-self.textFieldHeight)/2.0, self.textFieldWidth, self.textFieldHeight)];
-        self.textField.delegate = self;
-        self.placeholderFont = [UIFont systemFontOfSize:15];
-        [self addSubview:_textField];
-        
-        self.subline = [[UIView alloc]initWithFrame:CGRectMake(0, frame.size.height-0.5, frame.size.width, 0.5)];
-        self.subline.backgroundColor = [UIColor colorWithWhite:1 alpha:0.7];
-        [self addSubview:_subline];
+        //添加标题视图
+        [self addSubview:self.titleLabel];
+        //添加图标
+        [self addSubview:self.iconImageView];
+        //添加textField
+        [self addSubview:self.textField];
+        //添加下划线
+        [self addSubview:self.subline];
     }
     return self;
 }
@@ -169,6 +159,41 @@
 }
 
 #pragma mark Getter
+- (UILabel *)titleLabel {
+    if (!_titleLabel) {
+        _titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(2, MXTitleLabelHeight, self.contentFrame.size.width, MXTitleLabelHeight)];
+        _titleLabel.alpha = 0;
+        //默认字体大小 15
+        _titleLabel.font = [UIFont systemFontOfSize:15];
+    }
+    return _titleLabel;
+}
+
+- (UIImageView *)iconImageView {
+    if (!_iconImageView) {
+        _iconImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, (self.contentFrame.size.height-MXIconWidthAndHeight)/2.0, MXIconWidthAndHeight, MXIconWidthAndHeight)];
+        _iconImageView.contentMode = UIViewContentModeScaleAspectFit;
+    }
+    return _iconImageView;
+}
+
+- (MXTextField *)textField {
+    if (!_textField) {
+        _textField = [[MXTextField alloc]initWithFrame:CGRectMake(self.textFieldX, (self.contentFrame.size.height-self.textFieldHeight)/2.0, self.textFieldWidth, self.textFieldHeight)];
+        _textField.delegate = self;
+        _placeholderFont = [UIFont systemFontOfSize:15];
+    }
+    return _textField;
+}
+
+- (UIView *)subline {
+    if (!_subline) {
+        _subline = [[UIView alloc]initWithFrame:CGRectMake(0, self.contentFrame.size.height-0.5, self.contentFrame.size.width, 0.5)];
+        _subline.backgroundColor = [UIColor colorWithWhite:1 alpha:0.7];
+    }
+    return _subline;
+}
+
 - (NSString *)text {
     return self.textField.text;
 }
@@ -193,8 +218,8 @@
     }
     [UIView animateWithDuration:MXAnimationDuration animations:^{
         [self showTitleLabel:YES];
-        self.iconImageView.frame = CGRectMake(0, 20+(self.contentFrame.size.height-20-18)/2.0, 18, 18);
-        self.textField.frame = CGRectMake(self.textFieldX, 20+(self.contentFrame.size.height-20-self.textFieldHeight)/2.0, self.textFieldWidth, self.textFieldHeight);
+        self.iconImageView.frame = CGRectMake(0, MXTitleLabelHeight+(self.contentFrame.size.height-MXTitleLabelHeight-MXIconWidthAndHeight)/2.0, MXIconWidthAndHeight, MXIconWidthAndHeight);
+        self.textField.frame = CGRectMake(self.textFieldX, MXTitleLabelHeight+(self.contentFrame.size.height-MXTitleLabelHeight-self.textFieldHeight)/2.0, self.textFieldWidth, self.textFieldHeight);
     }];
 }
 
@@ -203,9 +228,9 @@
     if (!self.animation) {
         return;
     }
-    [UIView animateWithDuration:0.375 animations:^{
+    [UIView animateWithDuration:MXAnimationDuration animations:^{
         [self showTitleLabel:NO];
-        self.iconImageView.frame = CGRectMake(0, (self.contentFrame.size.height-18)/2.0, 18, 18);
+        self.iconImageView.frame = CGRectMake(0, (self.contentFrame.size.height-MXIconWidthAndHeight)/2.0, MXIconWidthAndHeight, MXIconWidthAndHeight);
         self.textField.frame = CGRectMake(self.textFieldX, (self.contentFrame.size.height-self.textFieldHeight)/2.0, self.textFieldWidth, self.textFieldHeight);
     }];
 }
@@ -224,13 +249,13 @@
         self.titleLabel.frame = CGRectMake(0, 0, self.titleLabel.frame.size.width, MXTitleLabelHeight);
     } else {
         self.titleLabel.alpha = 0;
-        self.titleLabel.frame = CGRectMake(0, 20, self.titleLabel.frame.size.width, MXTitleLabelHeight);
+        self.titleLabel.frame = CGRectMake(0, MXTitleLabelHeight, self.titleLabel.frame.size.width, MXTitleLabelHeight);
     }
 }
 
 - (NSAttributedString *)placeholdrAtrStr {
     if (_placeholder && _placeholder.length > 0) {
-        //如果设置了placeholder字体或者颜色，居中
+        //如果设置了placeholder字体或者颜色，垂直居中
         if (_placeholderFont || _placeholderColor) {
             NSMutableDictionary *mDict = [NSMutableDictionary new];
             if (_placeholderFont) {
