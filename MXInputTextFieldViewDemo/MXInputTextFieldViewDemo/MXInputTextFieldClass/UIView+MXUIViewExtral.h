@@ -8,11 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- 给UIView绑定属性，来判断是否添加过tap手势
- */
 @interface UIView (MXUIViewExtral)
-
+//来判断是否添加过tap手势
 @property (assign, nonatomic) BOOL existTapGes;
 
 + (UIView*)currentVisiableView;
