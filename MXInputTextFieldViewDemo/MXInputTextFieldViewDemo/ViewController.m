@@ -21,8 +21,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [MXTextFieldManager sharedInstance].hideKeyboardTouchOutside = YES;
+    
     self.view.backgroundColor = [UIColor colorWithRed:62/255.0 green:143/255.0 blue:242/255.0 alpha:1];
-    //self.view.backgroundColor = [UIColor brownColor];
+    
     self.tf1 = [[MXInputTextFieldView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-200)/2.0, 50, 200, 45)];
     
     self.tf1.iconName = @"phone";

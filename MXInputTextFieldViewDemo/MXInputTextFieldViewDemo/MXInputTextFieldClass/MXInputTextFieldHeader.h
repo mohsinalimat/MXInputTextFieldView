@@ -18,5 +18,7 @@
 //weakSelf & strongSelf
 #define MXWeakObj(o) autoreleasepool{} __weak typeof(o) o##Weak = o;
 #define MXStrongObj(o) autoreleasepool{} __strong typeof(o) o = o##Weak;
+//废弃宏
+#define MXDeprecated(info)  __attribute__((deprecated(info)))
 
 #endif /* MXInputTextFieldHeader_h */

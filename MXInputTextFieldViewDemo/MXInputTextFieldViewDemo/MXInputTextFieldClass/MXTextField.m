@@ -87,7 +87,7 @@
 }
 
 - (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self removeObserver:self forKeyPath:@"editOffestX"];
 }
 
 @end

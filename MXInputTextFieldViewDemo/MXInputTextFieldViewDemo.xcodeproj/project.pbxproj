@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		178C23875206F0602B0A9D7F /* libPods-MXInputTextFieldViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 010F17FB9EE0F58E3FAEA0DB /* libPods-MXInputTextFieldViewDemo.a */; };
+		9091201F1EEFDDB5007A3B8E /* UIView+MXUIViewExtral.m in Sources */ = {isa = PBXBuildFile; fileRef = 9091201E1EEFDDB5007A3B8E /* UIView+MXUIViewExtral.m */; };
 		90B02EBA1EEE87F00061115B /* MXInputTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B02EB11EEE87F00061115B /* MXInputTextFieldView.m */; };
 		90B02EBB1EEE87F00061115B /* MXInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B02EB31EEE87F00061115B /* MXInputView.m */; };
 		90B02EBC1EEE87F00061115B /* MXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B02EB51EEE87F00061115B /* MXTextField.m */; };
@@ -23,6 +24,8 @@
 /* Begin PBXFileReference section */
 		010F17FB9EE0F58E3FAEA0DB /* libPods-MXInputTextFieldViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MXInputTextFieldViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29DFA0FA783B5FF15FD53244 /* Pods-MXInputTextFieldViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MXInputTextFieldViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MXInputTextFieldViewDemo/Pods-MXInputTextFieldViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		9091201D1EEFDDB5007A3B8E /* UIView+MXUIViewExtral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MXUIViewExtral.h"; sourceTree = "<group>"; };
+		9091201E1EEFDDB5007A3B8E /* UIView+MXUIViewExtral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MXUIViewExtral.m"; sourceTree = "<group>"; };
 		90B02EAF1EEE87F00061115B /* MXInputTextFieldHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXInputTextFieldHeader.h; sourceTree = "<group>"; };
 		90B02EB01EEE87F00061115B /* MXInputTextFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXInputTextFieldView.h; sourceTree = "<group>"; };
 		90B02EB11EEE87F00061115B /* MXInputTextFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXInputTextFieldView.m; sourceTree = "<group>"; };
@@ -78,6 +81,8 @@
 				90B02EB51EEE87F00061115B /* MXTextField.m */,
 				90B02EB61EEE87F00061115B /* MXTextFieldManager.h */,
 				90B02EB71EEE87F00061115B /* MXTextFieldManager.m */,
+				9091201D1EEFDDB5007A3B8E /* UIView+MXUIViewExtral.h */,
+				9091201E1EEFDDB5007A3B8E /* UIView+MXUIViewExtral.m */,
 			);
 			path = MXInputTextFieldClass;
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 				90D5BAA41EE7B02C000E3830 /* ViewController.m in Sources */,
 				90D5BAA11EE7B02C000E3830 /* AppDelegate.m in Sources */,
 				90B02EBB1EEE87F00061115B /* MXInputView.m in Sources */,
+				9091201F1EEFDDB5007A3B8E /* UIView+MXUIViewExtral.m in Sources */,
 				90D5BA9E1EE7B02C000E3830 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

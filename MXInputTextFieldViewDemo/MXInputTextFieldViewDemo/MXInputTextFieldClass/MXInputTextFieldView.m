@@ -8,8 +8,6 @@
 
 #import "MXInputTextFieldView.h"
 #import <Masonry/Masonry.h>
-#import "MXTextFieldManager.h"
-#import "MXInputTextFieldHeader.h"
 #import "MXInputView.h"
 #import "MXTextField.h"
 
@@ -116,6 +114,10 @@
 
 - (void)setSureButtonTitleColor:(UIColor *)sureButtonTitleColor {
     self.textField.sureButtonColor = sureButtonTitleColor;
+}
+
+- (void)hideKeyboard:(UITapGestureRecognizer*)tap {
+    self.activity = NO;
 }
 
 - (void)setTitleText:(NSString *)titleText {
@@ -282,6 +284,10 @@
     if ([keyPath isEqualToString:@"refreshPlaceholder"]) {
         self.textField.attributedPlaceholder = [self placeholdrAtrStr];
     }
+}
+
+- (void)dealloc {
+    [self removeObserver:self forKeyPath:@"refreshPlaceholder"];
 }
 
 /*

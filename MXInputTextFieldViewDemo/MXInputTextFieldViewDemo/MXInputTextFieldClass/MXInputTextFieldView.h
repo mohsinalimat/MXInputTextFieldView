@@ -11,6 +11,8 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "MXInputTextFieldHeader.h"
+#import "MXTextFieldManager.h"
 
 //键盘return按键事件
 typedef void(^MXInputTextFieldReturnHandler)();
