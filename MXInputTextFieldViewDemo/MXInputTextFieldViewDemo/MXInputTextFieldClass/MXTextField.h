@@ -17,6 +17,7 @@
 @property (assign, nonatomic) BOOL showInputView;
 @property (strong, nonatomic) MXInputView *topView;
 @property (copy, nonatomic)   NSString *sureButtonTitle;
-@property (assign, nonatomic) UIColor *sureButtonColor;
+@property (strong, nonatomic) UIColor *sureButtonColor;
+@property (strong, nonatomic) UIFont *sureButtonFont;
 @property (assign, nonatomic) NSInteger index;
 @end

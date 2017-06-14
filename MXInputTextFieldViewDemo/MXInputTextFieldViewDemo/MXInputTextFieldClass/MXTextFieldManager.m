@@ -46,8 +46,10 @@ static MXTextFieldManager *manager = nil;
             self.currentView.existTapGes = YES;
         }
     } else {
-        [self.currentView removeGestureRecognizer:self.tapGesture];
-        self.currentView.existTapGes = NO;
+        if (self.currentView.existTapGes) {
+            [self.currentView removeGestureRecognizer:self.tapGesture];
+            self.currentView.existTapGes = NO;
+        }
     }
 }
 
@@ -70,6 +72,8 @@ static MXTextFieldManager *manager = nil;
     for (UIView *subView in self.currentView.subviews) {
         if ([subView isKindOfClass:[MXInputTextFieldView class]]) {
             ((MXInputTextFieldView*)subView).activity = NO;
+        } else if ([subView isKindOfClass:[UITextField class]]) {
+            [((UITextField*)subView) resignFirstResponder];
         }
     }
 }

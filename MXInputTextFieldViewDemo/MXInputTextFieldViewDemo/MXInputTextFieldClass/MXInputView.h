@@ -16,6 +16,8 @@
 
 @property (strong, nonatomic) UIColor *buttonTitleColor;
 
+@property (strong, nonatomic) UIFont *buttonTitleFont;
+
 - (instancetype)initWithHandler:(void(^)(void))handler;
 
 @end

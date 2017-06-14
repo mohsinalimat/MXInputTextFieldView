@@ -86,6 +86,10 @@
     self.topView.buttonTitleColor = sureButtonColor;
 }
 
+- (void)setSureButtonFont:(UIFont *)sureButtonFont {
+    self.topView.buttonTitleFont = sureButtonFont;
+}
+
 - (void)dealloc {
     [self removeObserver:self forKeyPath:@"editOffestX"];
 }

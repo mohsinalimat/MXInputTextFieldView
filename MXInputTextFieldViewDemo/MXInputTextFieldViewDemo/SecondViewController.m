@@ -17,9 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [MXTextFieldManager sharedInstance].hideKeyboardTouchOutside = YES;
-    
+        
     self.view.backgroundColor = [UIColor orangeColor];
     
     self.tf = [[MXInputTextFieldView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-200)/2.0, 250, 200, 45)];
@@ -34,38 +32,61 @@
     
     self.tf.clearMode = UITextFieldViewModeWhileEditing;
     
-    self.tf.returnKeyType = UIReturnKeyNext;
-    self.tf.returnHandler = ^{
-        NSLog(@"点击了return按钮");
-    };
-    
-    if (self.index == 0) {
-        @MXWeakObj(self);
-        self.tf.maxLimit = 8;
-        self.tf.beyondMaxLimitHandler = ^(NSInteger maxLimit) {
-            @MXStrongObj(self);
-            UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-                
-            }];
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"超出最大字数：%ld",maxLimit] preferredStyle:UIAlertControllerStyleAlert];
-            [alert addAction:action];
-            [self presentViewController:alert animated:YES completion:nil];
-        };
-    } else if (self.index == 1) {
-        self.tf.hasSureButtonView = YES;
-        self.tf.sureButtonTitle = @"搞事情";
-        self.tf.sureButtonTitleColor = [UIColor orangeColor];
-    } else if (self.index == 2) {
-        self.tf.iconName = @"phone";
-    } else if (self.index == 3) {
-        self.tf.titleText = @"手机号";
-        self.tf.titleTextColor = [UIColor blackColor];
-        self.tf.titleFont = [UIFont systemFontOfSize:10];
-    } else if (self.index == 4) {
-        self.tf.iconName = @"phone";
-        self.tf.titleText = @"手机号";
-        self.tf.titleTextColor = [UIColor blackColor];
-        self.tf.titleFont = [UIFont systemFontOfSize:10];
+    if (self.indexPath.section == 0) {
+        if (self.indexPath.row == 0) {
+            self.tf.hasSureButtonView = YES;
+            self.tf.sureButtonTitle = @"搞事情";
+            self.tf.sureButtonTitleColor = [UIColor orangeColor];
+            self.tf.sureButtonTitleFont = [UIFont systemFontOfSize:15];
+        } else if (self.indexPath.row == 1) {
+            self.tf.iconName = @"phone";
+        } else if (self.indexPath.row == 2) {
+            self.tf.titleText = @"手机号";
+            self.tf.titleTextColor = [UIColor blackColor];
+            self.tf.titleFont = [UIFont systemFontOfSize:10];
+        } else if (self.indexPath.row == 3) {
+            self.tf.iconName = @"phone";
+            self.tf.titleText = @"手机号";
+            self.tf.titleTextColor = [UIColor blackColor];
+            self.tf.titleFont = [UIFont systemFontOfSize:10];
+        }
+    } else if (self.indexPath.section == 1) {
+        if (self.indexPath.row == 0) {
+            @MXWeakObj(self);
+            self.tf.maxLimit = 8;
+            self.tf.beyondMaxLimitHandler = ^(NSInteger maxLimit) {
+                @MXStrongObj(self);
+                UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+                    
+                }];
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"超出最大字数：%ld",maxLimit] preferredStyle:UIAlertControllerStyleAlert];
+                [alert addAction:action];
+                [self presentViewController:alert animated:YES completion:nil];
+            };
+        } else if (self.indexPath.row == 1) {
+            @MXWeakObj(self);
+            self.tf.endEditHandler = ^(NSString *text) {
+                @MXStrongObj(self);
+                UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+                    
+                }];
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"您输入的内容：%@",text] preferredStyle:UIAlertControllerStyleAlert];
+                [alert addAction:action];
+                [self presentViewController:alert animated:YES completion:nil];
+            };
+        } else if (self.indexPath.row == 2) {
+            @MXWeakObj(self);
+            self.tf.returnKeyType = UIReturnKeyNext;
+            self.tf.returnHandler = ^{
+                @MXStrongObj(self);
+                UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+                    
+                }];
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"点击了return按钮" preferredStyle:UIAlertControllerStyleAlert];
+                [alert addAction:action];
+                [self presentViewController:alert animated:YES completion:nil];
+            };
+        }
     }
     [self.view addSubview:_tf];
 }

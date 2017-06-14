@@ -109,11 +109,20 @@
 }
 
 - (void)setSureButtonTitle:(NSString *)sureButtonTitle {
+    sureButtonTitle = sureButtonTitle.length > 0 ? sureButtonTitle : @"确定";
     self.textField.sureButtonTitle = sureButtonTitle;
 }
 
 - (void)setSureButtonTitleColor:(UIColor *)sureButtonTitleColor {
+    sureButtonTitleColor = sureButtonTitleColor ? sureButtonTitleColor : [UIColor blackColor];
     self.textField.sureButtonColor = sureButtonTitleColor;
+}
+
+- (void)setSureButtonTitleFont:(UIFont *)sureButtonTitleFont {
+    if (!sureButtonTitleFont) {
+        return;
+    }
+    self.textField.sureButtonFont = sureButtonTitleFont;
 }
 
 - (void)hideKeyboard:(UITapGestureRecognizer*)tap {
@@ -230,6 +239,9 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     [MXTextFieldManager sharedInstance].previousTextField = (MXTextField*)textField;
+    if (self.endEditHandler) {
+        self.endEditHandler(textField.text);
+    }
     if (!self.animation) {
         return;
     }

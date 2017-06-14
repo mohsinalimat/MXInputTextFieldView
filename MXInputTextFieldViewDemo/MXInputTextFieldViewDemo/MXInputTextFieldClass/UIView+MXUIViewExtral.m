@@ -18,7 +18,7 @@ static char const * const ExistTapGesKey = "existTapGes";
     objc_setAssociatedObject(self, ExistTapGesKey, @(existTapGes), OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-- (BOOL)existTapGes{
+- (BOOL)existTapGes {
     return objc_getAssociatedObject(self, ExistTapGesKey);
 }
 

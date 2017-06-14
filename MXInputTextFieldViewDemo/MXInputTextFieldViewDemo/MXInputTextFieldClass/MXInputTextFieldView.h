@@ -44,6 +44,8 @@ typedef void(^MXInputTextFieldReturnHandler)();
 @property (assign, nonatomic) NSInteger maxLimit;
 //超出最大字数触发回调
 @property (copy, nonatomic) void (^beyondMaxLimitHandler) (NSInteger maxLimit);
+//结束编辑回调（一般用于内容校验）
+@property (copy, nonatomic) void (^endEditHandler) (NSString *text);
 //清除按钮模式
 @property (assign, nonatomic) UITextFieldViewMode clearMode;
 //激活键盘
@@ -60,6 +62,8 @@ typedef void(^MXInputTextFieldReturnHandler)();
 @property (copy, nonatomic) NSString *sureButtonTitle;
 //设置确认按钮颜色，默认黑色
 @property (strong, nonatomic) UIColor *sureButtonTitleColor;
+//设置确认按钮字体
+@property (strong, nonatomic) UIFont *sureButtonTitleFont;
 
 /*********Title*********/
 //文本，如果为空，没有动画

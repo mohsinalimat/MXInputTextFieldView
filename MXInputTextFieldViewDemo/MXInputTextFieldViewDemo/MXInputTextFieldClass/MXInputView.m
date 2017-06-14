@@ -38,6 +38,10 @@
     [self.sureBtn setTitleColor:buttonTitleColor forState:UIControlStateNormal];
 }
 
+- (void)setButtonTitleFont:(UIFont *)buttonTitleFont {
+    self.sureBtn.titleLabel.font = buttonTitleFont;
+}
+
 - (void)sureBtnClicked {
     if (self.sureHandler) {
         self.sureHandler();

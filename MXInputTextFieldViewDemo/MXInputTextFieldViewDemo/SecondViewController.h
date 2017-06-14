@@ -10,6 +10,6 @@
 
 @interface SecondViewController : UIViewController
 
-@property (assign, nonatomic) NSInteger index;
+@property (strong, nonatomic) NSIndexPath *indexPath;
 
 @end
