@@ -42,6 +42,8 @@ typedef void(^MXInputTextFieldReturnHandler)();
 @property (strong, nonatomic) UIColor *tintColor;
 //最大字数
 @property (assign, nonatomic) NSInteger maxLimit;
+//超出最大字数触发回调
+@property (copy, nonatomic) void (^beyondMaxLimitHandler) (NSInteger maxLimit);
 //清除按钮模式
 @property (assign, nonatomic) UITextFieldViewMode clearMode;
 //激活键盘

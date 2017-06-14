@@ -157,6 +157,9 @@
 - (void)limitInput:(MXTextField*)tf {
     if (tf.text.length > _maxLimit) {
         tf.text = [tf.text substringToIndex:_maxLimit];
+        if (self.beyondMaxLimitHandler) {
+            self.beyondMaxLimitHandler(_maxLimit);
+        }
     }
 }
 

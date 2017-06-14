@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		178C23875206F0602B0A9D7F /* libPods-MXInputTextFieldViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 010F17FB9EE0F58E3FAEA0DB /* libPods-MXInputTextFieldViewDemo.a */; };
 		9091201F1EEFDDB5007A3B8E /* UIView+MXUIViewExtral.m in Sources */ = {isa = PBXBuildFile; fileRef = 9091201E1EEFDDB5007A3B8E /* UIView+MXUIViewExtral.m */; };
+		909120221EEFF039007A3B8E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 909120211EEFF039007A3B8E /* SecondViewController.m */; };
 		90B02EBA1EEE87F00061115B /* MXInputTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B02EB11EEE87F00061115B /* MXInputTextFieldView.m */; };
 		90B02EBB1EEE87F00061115B /* MXInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B02EB31EEE87F00061115B /* MXInputView.m */; };
 		90B02EBC1EEE87F00061115B /* MXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B02EB51EEE87F00061115B /* MXTextField.m */; };
@@ -26,6 +27,8 @@
 		29DFA0FA783B5FF15FD53244 /* Pods-MXInputTextFieldViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MXInputTextFieldViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MXInputTextFieldViewDemo/Pods-MXInputTextFieldViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9091201D1EEFDDB5007A3B8E /* UIView+MXUIViewExtral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MXUIViewExtral.h"; sourceTree = "<group>"; };
 		9091201E1EEFDDB5007A3B8E /* UIView+MXUIViewExtral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MXUIViewExtral.m"; sourceTree = "<group>"; };
+		909120201EEFF039007A3B8E /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		909120211EEFF039007A3B8E /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		90B02EAF1EEE87F00061115B /* MXInputTextFieldHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXInputTextFieldHeader.h; sourceTree = "<group>"; };
 		90B02EB01EEE87F00061115B /* MXInputTextFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXInputTextFieldView.h; sourceTree = "<group>"; };
 		90B02EB11EEE87F00061115B /* MXInputTextFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXInputTextFieldView.m; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 				90D5BAA01EE7B02C000E3830 /* AppDelegate.m */,
 				90D5BAA21EE7B02C000E3830 /* ViewController.h */,
 				90D5BAA31EE7B02C000E3830 /* ViewController.m */,
+				909120201EEFF039007A3B8E /* SecondViewController.h */,
+				909120211EEFF039007A3B8E /* SecondViewController.m */,
 				90D5BAA51EE7B02C000E3830 /* Main.storyboard */,
 				90D5BAA81EE7B02C000E3830 /* Assets.xcassets */,
 				90D5BAAA1EE7B02C000E3830 /* LaunchScreen.storyboard */,
@@ -261,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				909120221EEFF039007A3B8E /* SecondViewController.m in Sources */,
 				90B02EBD1EEE87F00061115B /* MXTextFieldManager.m in Sources */,
 				90B02EBC1EEE87F00061115B /* MXTextField.m in Sources */,
 				90B02EBA1EEE87F00061115B /* MXInputTextFieldView.m in Sources */,
