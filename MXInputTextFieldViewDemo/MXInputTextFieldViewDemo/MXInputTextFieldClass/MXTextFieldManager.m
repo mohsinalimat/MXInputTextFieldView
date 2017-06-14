@@ -34,12 +34,12 @@ static MXTextFieldManager *manager = nil;
     if (self = [super init]) {
         [self addObserver:self forKeyPath:@"currentTextField" options:NSKeyValueObservingOptionNew context:nil];
         [self addObserver:self forKeyPath:@"previousTextField" options:NSKeyValueObservingOptionNew context:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow) name:UIKeyboardWillShowNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow) name:UIKeyboardDidShowNotification object:nil];
     }
     return self;
 }
 
-- (void)keyboardWillShow {
+- (void)keyboardDidShow {
     if (self.hideKeyboardTouchOutside) {
         if (!self.currentView.existTapGes) {
             [self.currentView addGestureRecognizer:self.tapGesture];

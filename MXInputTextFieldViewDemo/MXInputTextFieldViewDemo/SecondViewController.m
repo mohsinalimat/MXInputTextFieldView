@@ -24,7 +24,7 @@
     
     self.tf = [[MXInputTextFieldView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-200)/2.0, 250, 200, 45)];
     
-    self.tf.placeholderColor = [UIColor whiteColor];
+    self.tf.placeholderColor = [UIColor colorWithWhite:1 alpha:0.7];
     self.tf.placeholderFont = [UIFont systemFontOfSize:15];
     self.tf.placeholder = @"请输入手机号码";
     
