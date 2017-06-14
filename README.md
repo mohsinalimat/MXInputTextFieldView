@@ -1,15 +1,29 @@
 # MXInputTextFieldView
 高度自定义TextField
 ## 功能
-* 支持设置图标
+* 支持添加图标
 * 支持设置placeholder字体、颜色
-* 支持设置下划线
 * 支持动画
 * 支持设置键盘类型、return键类型
-* 支持设置return键事件
 * 支持给键盘上方添加确定按钮
+* 支持事件回调
 ## 效果示例
-* ![效果图](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/tf.gif)
+* 功能列表
+* ![功能列表](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/0.png)
+* 带确认按钮
+* ![1-1](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/1-1.gif)
+* 带图标
+* ![1-2](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/1-2.gif)
+* 带标题（动画）
+* ![1-3](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/1-3.gif)
+* 带图标、标题（动画）
+* ![1-4](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/1-4.gif)
+* 限制输入长度、并回调
+* ![2-1](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/2-1.gif)
+* 结束编辑回调
+* ![2-2](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/2-2.gif)
+* Return键回调
+* ![2-3](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/2-3.gif)
 ## 使用说明
 * 添加文件
     * 将工程中MXInputTextFieldClass文件夹内容添加到项目中
@@ -50,7 +64,10 @@
     //给键盘上方添加确定按钮
     self.tf.hasSureButtonView = YES;
     
-    /*设置更多属性，参考MXInputTextFieldView.h*/
+    /*
+    设置更多属性，参考MXInputTextFieldView.h；
+    具体用法参考Demo~
+    */
     
     [self.view addSubview:_tf];
 }
