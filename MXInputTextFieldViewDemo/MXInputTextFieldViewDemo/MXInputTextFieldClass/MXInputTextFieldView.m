@@ -7,7 +7,6 @@
 //
 
 #import "MXInputTextFieldView.h"
-#import <Masonry/Masonry.h>
 #import "MXInputView.h"
 #import "MXTextField.h"
 

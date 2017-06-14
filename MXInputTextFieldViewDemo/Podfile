@@ -5,6 +5,6 @@ inhibit_all_warnings!
 
 target "MXInputTextFieldViewDemo" do
 
-pod 'Masonry'
+#pod 'Masonry'
 
 end
