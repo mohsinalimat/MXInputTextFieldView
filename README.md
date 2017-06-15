@@ -9,9 +9,11 @@
 * 支持事件回调
 ## 效果示例
 * 功能列表
+***
   ![功能列表](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/0.png)
   
 * 效果图
+***
   ![效果](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/tf.gif)
 ## 使用说明
 * 1 使用Cocoapods安装
