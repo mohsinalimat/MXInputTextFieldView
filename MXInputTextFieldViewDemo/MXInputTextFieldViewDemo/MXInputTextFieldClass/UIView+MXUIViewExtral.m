@@ -8,7 +8,6 @@
 
 #import "UIView+MXUIViewExtral.h"
 #import <objc/runtime.h>
-#import "AppDelegate.h"
 
 static char const * const ExistTapGesKey = "existTapGes";
 

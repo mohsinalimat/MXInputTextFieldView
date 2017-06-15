@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MXInputTextFieldView"
-  s.version      = "1.1.1"
+  s.version      = "1.1.3"
   s.summary      = "深度定制UITextField"
 
   # This description is used to generate tags and improve search results.
