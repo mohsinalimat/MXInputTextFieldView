@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MXInputTextFieldView"
-  s.version      = "1.1.3"
+  s.version      = "1.1.4"
   s.summary      = "深度定制UITextField"
 
   # This description is used to generate tags and improve search results.
@@ -58,7 +58,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "hmx" => "helloyellow@aliyun.com" }
+  s.author             = { "HuangMingxing" => "hmxing099097@163.com" }
   # Or just: s.author    = "hmx"
   # s.authors            = { "hmx" => "mingxing.huang@msxf.com" }
   # s.social_media_url   = "http://twitter.com/hmx"

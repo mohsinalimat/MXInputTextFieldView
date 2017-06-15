@@ -7,29 +7,75 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E63C494C2355BFB372106F1720ED9C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		F223D8D085C5741C05A8D0EAD8A05D56 /* Pods-MXInputTextFieldViewDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F63D5851D0906F8E0181DD26277CEFED /* Pods-MXInputTextFieldViewDemo-dummy.m */; };
+		024D75910B6D70D30DF83BBD4F2A039A /* MXInputTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D3DE08D56BF7C91C4011B1E87AF271 /* MXInputTextFieldView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		24EFFA656DBD2BE531D8D7D435F7018F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		392526E60A9DAA206CAA07B56D0D3A6E /* Pods-MXInputTextFieldViewDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F63D5851D0906F8E0181DD26277CEFED /* Pods-MXInputTextFieldViewDemo-dummy.m */; };
+		7230C07AC1C9A2D7F8F037117858BEB2 /* MXTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB0426DC8061E8F1960D9FD26D56C7E /* MXTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91E799CA6C36534FCD0D0A1A3D87D456 /* MXInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 39797375731C5D44F4EF15A720A47E48 /* MXInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98E91FDDF4AE454F67DB6A2F4167A41F /* MXTextFieldManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C49B6562AF950F02CE61D2878B76BD4C /* MXTextFieldManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9FE4EBA17BF1159236F6EF058AB46A08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		BB867413064EFFD805C1E7690C6E5662 /* UIView+MXUIViewExtral.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B45D596FC8F62A2C8A6E2BFB222F50 /* UIView+MXUIViewExtral.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CF1432479885D221F6C0FF105109ED1B /* MXTextFieldManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C328DD06B8F7183FACFA11159B847D9F /* MXTextFieldManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E005524259E9921E79BD8D851C9EF528 /* MXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CB4FA1377DC2CDC349C9FF8B6DE379 /* MXTextField.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E51C8062A481FD01AEE3EC2E5E69690D /* MXInputTextFieldHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 88722F72378E879227CD7793ABD8B639 /* MXInputTextFieldHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7FEF3FC5E85F0372F113DDA8CBA1DFD /* UIView+MXUIViewExtral.h in Headers */ = {isa = PBXBuildFile; fileRef = 538DB15DFF13CF7085CD4AD586BDECB2 /* UIView+MXUIViewExtral.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB01D5E147CE417D25768160F59D5540 /* MXInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4912A75659EC7B3032D96CB38523871 /* MXInputView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EB49C60BDB5666450E8E02BE0883F286 /* MXInputTextFieldView.h in Headers */ = {isa = PBXBuildFile; fileRef = E474DD385279C74429CC48D46117AEB5 /* MXInputTextFieldView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA175C88096433B1A48272EE58A41553 /* MXInputTextFieldView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E2F889C8F80EB26B41908AB2EF4130 /* MXInputTextFieldView-dummy.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		84628C53980634A9C8DBB414D64E0E0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC018F895F1F38716A7EE1D5863535AB;
+			remoteInfo = MXInputTextFieldView;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		29CB4FA1377DC2CDC349C9FF8B6DE379 /* MXTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MXTextField.m; path = MXInputTextFieldClass/MXTextField.m; sourceTree = "<group>"; };
 		2A1D40310EC299A3A2616B1B084715D2 /* Pods-MXInputTextFieldViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MXInputTextFieldViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		35745C47D4F2C0828C4AD36A7456EA26 /* MXInputTextFieldView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MXInputTextFieldView-prefix.pch"; sourceTree = "<group>"; };
+		39797375731C5D44F4EF15A720A47E48 /* MXInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MXInputView.h; path = MXInputTextFieldClass/MXInputView.h; sourceTree = "<group>"; };
+		43D3DE08D56BF7C91C4011B1E87AF271 /* MXInputTextFieldView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MXInputTextFieldView.m; path = MXInputTextFieldClass/MXInputTextFieldView.m; sourceTree = "<group>"; };
+		538DB15DFF13CF7085CD4AD586BDECB2 /* UIView+MXUIViewExtral.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+MXUIViewExtral.h"; path = "MXInputTextFieldClass/UIView+MXUIViewExtral.h"; sourceTree = "<group>"; };
+		5A6A837BB06FAAE92B989DE73831DA43 /* libMXInputTextFieldView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMXInputTextFieldView.a; path = libMXInputTextFieldView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		88722F72378E879227CD7793ABD8B639 /* MXInputTextFieldHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MXInputTextFieldHeader.h; path = MXInputTextFieldClass/MXInputTextFieldHeader.h; sourceTree = "<group>"; };
 		933F3C7653DFA96C9FBA7517DC3C3D9B /* Pods-MXInputTextFieldViewDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MXInputTextFieldViewDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A95178BD788915F9324373EDA230CCE7 /* libPods-MXInputTextFieldViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MXInputTextFieldViewDemo.a"; path = "libPods-MXInputTextFieldViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94E2F889C8F80EB26B41908AB2EF4130 /* MXInputTextFieldView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MXInputTextFieldView-dummy.m"; sourceTree = "<group>"; };
+		9982A2348CDDDAEE7A004C404E78E2DE /* MXInputTextFieldView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MXInputTextFieldView.xcconfig; sourceTree = "<group>"; };
+		9AB0426DC8061E8F1960D9FD26D56C7E /* MXTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MXTextField.h; path = MXInputTextFieldClass/MXTextField.h; sourceTree = "<group>"; };
 		A9FA5607E6530B2310ADCCBB49E76F8B /* Pods-MXInputTextFieldViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MXInputTextFieldViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 		BAEA48C740FE732C5A198AE62798092D /* Pods-MXInputTextFieldViewDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MXInputTextFieldViewDemo-resources.sh"; sourceTree = "<group>"; };
+		C328DD06B8F7183FACFA11159B847D9F /* MXTextFieldManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MXTextFieldManager.h; path = MXInputTextFieldClass/MXTextFieldManager.h; sourceTree = "<group>"; };
+		C49B6562AF950F02CE61D2878B76BD4C /* MXTextFieldManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MXTextFieldManager.m; path = MXInputTextFieldClass/MXTextFieldManager.m; sourceTree = "<group>"; };
 		C5936A6DCA889A13C38ED851486DA56F /* Pods-MXInputTextFieldViewDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MXInputTextFieldViewDemo-frameworks.sh"; sourceTree = "<group>"; };
 		D2C1A1DBF5BB40B633C663AE38001F4F /* Pods-MXInputTextFieldViewDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MXInputTextFieldViewDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		E474DD385279C74429CC48D46117AEB5 /* MXInputTextFieldView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MXInputTextFieldView.h; path = MXInputTextFieldClass/MXInputTextFieldView.h; sourceTree = "<group>"; };
+		E4912A75659EC7B3032D96CB38523871 /* MXInputView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MXInputView.m; path = MXInputTextFieldClass/MXInputView.m; sourceTree = "<group>"; };
+		E8B45D596FC8F62A2C8A6E2BFB222F50 /* UIView+MXUIViewExtral.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+MXUIViewExtral.m"; path = "MXInputTextFieldClass/UIView+MXUIViewExtral.m"; sourceTree = "<group>"; };
 		F63D5851D0906F8E0181DD26277CEFED /* Pods-MXInputTextFieldViewDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MXInputTextFieldViewDemo-dummy.m"; sourceTree = "<group>"; };
+		FA1EEB23A4F8328EB034EACDD1234DA4 /* libPods-MXInputTextFieldViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MXInputTextFieldViewDemo.a"; path = "libPods-MXInputTextFieldViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8E941C31DA669BEE6F23AEAB9F3653AB /* Frameworks */ = {
+		424160F9EBD1866F613C417F6DB0FF5A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E63C494C2355BFB372106F1720ED9C2 /* Foundation.framework in Frameworks */,
+				9FE4EBA17BF1159236F6EF058AB46A08 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55D1AB9A0F9B4BF536B71F4C8CAD342A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24EFFA656DBD2BE531D8D7D435F7018F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,12 +90,12 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		71763B6D2C0937CEBCF16EB896C2F19F /* Products */ = {
+		37DFA7E65C7D6D9CE6F279372E46A984 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A95178BD788915F9324373EDA230CCE7 /* libPods-MXInputTextFieldViewDemo.a */,
+				7F81AF5F07621B9FA2237BF0E231995B /* MXInputTextFieldView */,
 			);
-			name = Products;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -57,9 +103,30 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				71763B6D2C0937CEBCF16EB896C2F19F /* Products */,
+				37DFA7E65C7D6D9CE6F279372E46A984 /* Pods */,
+				B1D461AF8392B23423B6536EE59C0680 /* Products */,
 				04B293D2940AA41BBC693010BA559214 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		7F81AF5F07621B9FA2237BF0E231995B /* MXInputTextFieldView */ = {
+			isa = PBXGroup;
+			children = (
+				88722F72378E879227CD7793ABD8B639 /* MXInputTextFieldHeader.h */,
+				E474DD385279C74429CC48D46117AEB5 /* MXInputTextFieldView.h */,
+				43D3DE08D56BF7C91C4011B1E87AF271 /* MXInputTextFieldView.m */,
+				39797375731C5D44F4EF15A720A47E48 /* MXInputView.h */,
+				E4912A75659EC7B3032D96CB38523871 /* MXInputView.m */,
+				9AB0426DC8061E8F1960D9FD26D56C7E /* MXTextField.h */,
+				29CB4FA1377DC2CDC349C9FF8B6DE379 /* MXTextField.m */,
+				C328DD06B8F7183FACFA11159B847D9F /* MXTextFieldManager.h */,
+				C49B6562AF950F02CE61D2878B76BD4C /* MXTextFieldManager.m */,
+				538DB15DFF13CF7085CD4AD586BDECB2 /* UIView+MXUIViewExtral.h */,
+				E8B45D596FC8F62A2C8A6E2BFB222F50 /* UIView+MXUIViewExtral.m */,
+				B0BFD6B626A7D897922865C80053F847 /* Support Files */,
+			);
+			name = MXInputTextFieldView;
+			path = MXInputTextFieldView;
 			sourceTree = "<group>";
 		};
 		803EC46E12D2258B3ADA171BDA1906FC /* Pods-MXInputTextFieldViewDemo */ = {
@@ -75,6 +142,26 @@
 			);
 			name = "Pods-MXInputTextFieldViewDemo";
 			path = "Target Support Files/Pods-MXInputTextFieldViewDemo";
+			sourceTree = "<group>";
+		};
+		B0BFD6B626A7D897922865C80053F847 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9982A2348CDDDAEE7A004C404E78E2DE /* MXInputTextFieldView.xcconfig */,
+				94E2F889C8F80EB26B41908AB2EF4130 /* MXInputTextFieldView-dummy.m */,
+				35745C47D4F2C0828C4AD36A7456EA26 /* MXInputTextFieldView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MXInputTextFieldView";
+			sourceTree = "<group>";
+		};
+		B1D461AF8392B23423B6536EE59C0680 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A6A837BB06FAAE92B989DE73831DA43 /* libMXInputTextFieldView.a */,
+				FA1EEB23A4F8328EB034EACDD1234DA4 /* libPods-MXInputTextFieldViewDemo.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -95,21 +182,55 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		E1E2261B3EABABCF5A7DE7DE25CCE075 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E51C8062A481FD01AEE3EC2E5E69690D /* MXInputTextFieldHeader.h in Headers */,
+				EB49C60BDB5666450E8E02BE0883F286 /* MXInputTextFieldView.h in Headers */,
+				91E799CA6C36534FCD0D0A1A3D87D456 /* MXInputView.h in Headers */,
+				7230C07AC1C9A2D7F8F037117858BEB2 /* MXTextField.h in Headers */,
+				CF1432479885D221F6C0FF105109ED1B /* MXTextFieldManager.h in Headers */,
+				E7FEF3FC5E85F0372F113DDA8CBA1DFD /* UIView+MXUIViewExtral.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		B100EDE8AFCAE3B719EBCDD6A9D04C41 /* Pods-MXInputTextFieldViewDemo */ = {
+		01C48D9F2A5C19CC72FCB339B673175B /* Pods-MXInputTextFieldViewDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 05AF9FE45908B5675EF0823702F64C2E /* Build configuration list for PBXNativeTarget "Pods-MXInputTextFieldViewDemo" */;
+			buildConfigurationList = C4B1BAD65CAF37D6242AEBB81514F230 /* Build configuration list for PBXNativeTarget "Pods-MXInputTextFieldViewDemo" */;
 			buildPhases = (
-				91BC75D40114FCADE5F13A2ED1F694D3 /* Sources */,
-				8E941C31DA669BEE6F23AEAB9F3653AB /* Frameworks */,
+				2A2C84B17765BD581EA24620521561E3 /* Sources */,
+				424160F9EBD1866F613C417F6DB0FF5A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F26F7ECC8A86950C860482C93FA3CB3 /* PBXTargetDependency */,
+			);
+			name = "Pods-MXInputTextFieldViewDemo";
+			productName = "Pods-MXInputTextFieldViewDemo";
+			productReference = FA1EEB23A4F8328EB034EACDD1234DA4 /* libPods-MXInputTextFieldViewDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AC018F895F1F38716A7EE1D5863535AB /* MXInputTextFieldView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A5A8482CFC6F1FA6D2F2FC75CCCEBDD /* Build configuration list for PBXNativeTarget "MXInputTextFieldView" */;
+			buildPhases = (
+				19975892CB53C73EDB0570F0800B3C4C /* Sources */,
+				55D1AB9A0F9B4BF536B71F4C8CAD342A /* Frameworks */,
+				E1E2261B3EABABCF5A7DE7DE25CCE075 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-MXInputTextFieldViewDemo";
-			productName = "Pods-MXInputTextFieldViewDemo";
-			productReference = A95178BD788915F9324373EDA230CCE7 /* libPods-MXInputTextFieldViewDemo.a */;
+			name = MXInputTextFieldView;
+			productName = MXInputTextFieldView;
+			productReference = 5A6A837BB06FAAE92B989DE73831DA43 /* libMXInputTextFieldView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -129,40 +250,63 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 71763B6D2C0937CEBCF16EB896C2F19F /* Products */;
+			productRefGroup = B1D461AF8392B23423B6536EE59C0680 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B100EDE8AFCAE3B719EBCDD6A9D04C41 /* Pods-MXInputTextFieldViewDemo */,
+				AC018F895F1F38716A7EE1D5863535AB /* MXInputTextFieldView */,
+				01C48D9F2A5C19CC72FCB339B673175B /* Pods-MXInputTextFieldViewDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		91BC75D40114FCADE5F13A2ED1F694D3 /* Sources */ = {
+		19975892CB53C73EDB0570F0800B3C4C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F223D8D085C5741C05A8D0EAD8A05D56 /* Pods-MXInputTextFieldViewDemo-dummy.m in Sources */,
+				FA175C88096433B1A48272EE58A41553 /* MXInputTextFieldView-dummy.m in Sources */,
+				024D75910B6D70D30DF83BBD4F2A039A /* MXInputTextFieldView.m in Sources */,
+				EB01D5E147CE417D25768160F59D5540 /* MXInputView.m in Sources */,
+				E005524259E9921E79BD8D851C9EF528 /* MXTextField.m in Sources */,
+				98E91FDDF4AE454F67DB6A2F4167A41F /* MXTextFieldManager.m in Sources */,
+				BB867413064EFFD805C1E7690C6E5662 /* UIView+MXUIViewExtral.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A2C84B17765BD581EA24620521561E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				392526E60A9DAA206CAA07B56D0D3A6E /* Pods-MXInputTextFieldViewDemo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		3F26F7ECC8A86950C860482C93FA3CB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MXInputTextFieldView;
+			target = AC018F895F1F38716A7EE1D5863535AB /* MXInputTextFieldView */;
+			targetProxy = 84628C53980634A9C8DBB414D64E0E0B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		1893353FA78974B9285324C4FA60D125 /* Release */ = {
+		04D610F4047932AC8967BDD6C8147AD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9FA5607E6530B2310ADCCBB49E76F8B /* Pods-MXInputTextFieldViewDemo.release.xcconfig */;
+			baseConfigurationReference = 2A1D40310EC299A3A2616B1B084715D2 /* Pods-MXInputTextFieldViewDemo.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -171,9 +315,32 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
-		3890D7C92DE120C2BA762135796CFA80 /* Release */ = {
+		10595F4135E0FEFC0AC72D9B6CAFA6D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9982A2348CDDDAEE7A004C404E78E2DE /* MXInputTextFieldView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MXInputTextFieldView/MXInputTextFieldView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		34FE9531DA9AF2820790339988D5FF41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -209,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
@@ -217,7 +384,30 @@
 			};
 			name = Release;
 		};
-		587B8ECC28E3A9FF4796C121925DC113 /* Debug */ = {
+		4AAA4A93FC67A8AB8E58B6B7C9CA2510 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9982A2348CDDDAEE7A004C404E78E2DE /* MXInputTextFieldView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MXInputTextFieldView/MXInputTextFieldView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C104F7F091290C3D1E248192F07FE689 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -257,7 +447,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -265,19 +455,19 @@
 			};
 			name = Debug;
 		};
-		BE386706272F56AD8A2374779546A374 /* Debug */ = {
+		C207CFC604483B8B29BC928FADF25C15 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A1D40310EC299A3A2616B1B084715D2 /* Pods-MXInputTextFieldViewDemo.debug.xcconfig */;
+			baseConfigurationReference = A9FA5607E6530B2310ADCCBB49E76F8B /* Pods-MXInputTextFieldViewDemo.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -286,25 +476,34 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		05AF9FE45908B5675EF0823702F64C2E /* Build configuration list for PBXNativeTarget "Pods-MXInputTextFieldViewDemo" */ = {
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BE386706272F56AD8A2374779546A374 /* Debug */,
-				1893353FA78974B9285324C4FA60D125 /* Release */,
+				C104F7F091290C3D1E248192F07FE689 /* Debug */,
+				34FE9531DA9AF2820790339988D5FF41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		6A5A8482CFC6F1FA6D2F2FC75CCCEBDD /* Build configuration list for PBXNativeTarget "MXInputTextFieldView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				587B8ECC28E3A9FF4796C121925DC113 /* Debug */,
-				3890D7C92DE120C2BA762135796CFA80 /* Release */,
+				10595F4135E0FEFC0AC72D9B6CAFA6D4 /* Debug */,
+				4AAA4A93FC67A8AB8E58B6B7C9CA2510 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4B1BAD65CAF37D6242AEBB81514F230 /* Build configuration list for PBXNativeTarget "Pods-MXInputTextFieldViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04D610F4047932AC8967BDD6C8147AD0 /* Debug */,
+				C207CFC604483B8B29BC928FADF25C15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
