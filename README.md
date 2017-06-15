@@ -9,25 +9,34 @@
 * 支持事件回调
 ## 效果示例
 * 功能列表
-* ![功能列表](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/0.png)
+  ![功能列表](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/0.png)
+  
 * 带确认按钮
-* ![1-1](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/1-1.gif)
+  ![1-1](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/1-1.gif)
+  
 * 带图标
-* ![1-2](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/1-2.gif)
+  ![1-2](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/1-2.gif)
+
 * 带标题（动画）
-* ![1-3](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/1-3.gif)
+  ![1-3](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/1-3.gif)
+
 * 带图标、标题（动画）
-* ![1-4](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/1-4.gif)
+  ![1-4](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/1-4.gif)
+
 * 限制输入长度、并回调
-* ![2-1](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/2-1.gif)
+  ![2-1](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/2-1.gif)
+
 * 结束编辑回调
-* ![2-2](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/2-2.gif)
+  ![2-2](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/2-2.gif)
+
 * Return键回调
-* ![2-3](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/2-3.gif)
+  ![2-3](https://github.com/iamhmx/MXInputTextFieldView/blob/master/MXInputTextFieldViewDemo/screenshots/2-3.gif)
 ## 使用说明
-* 添加文件
-    * 将工程中MXInputTextFieldClass文件夹内容添加到项目中
-* 添加代码
+* 1 使用Cocoapods安装
+    * pod 'MXInputTextFieldView'
+* 2 添加文件
+    * 将MXInputTextFieldClass文件夹内容添加到项目中
+## 代码示例
 ```objc
 /*ViewController.m*/
 #import "MXInputTextFieldView.h"
