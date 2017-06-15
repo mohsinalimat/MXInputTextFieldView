@@ -18,7 +18,7 @@ static char const * const ExistTapGesKey = "existTapGes";
 }
 
 - (BOOL)existTapGes {
-    return objc_getAssociatedObject(self, ExistTapGesKey);
+    return [objc_getAssociatedObject(self, ExistTapGesKey) boolValue];
 }
 
 + (UIView*)currentVisiableView {
